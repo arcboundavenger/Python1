@@ -9,7 +9,7 @@ lines = infp.readlines()
 for i in range(0,len(lines)):
     lines[i]=lines[i].replace('\n','@@@')
 
-print lines
+# print lines
 lines2 = []
 i=0
 for j in range(0, len(lines)-3, 3):
