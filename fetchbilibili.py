@@ -18,14 +18,14 @@ from selenium.webdriver.common.keys import Keys
 def crawl(url):
     driver = webdriver.Firefox(executable_path='C:/Python27/geckodriver')
     driver.get(url)
-    content = driver.find_elements_by_xpath("//div[@class='content clearfix']")
-    infofile.write(url + "\r\n")
+    content = driver.find_elements_by_xpath("//div[@class='content clearfix']/div[@class='small-item fakeDanmu-item']")
+    # infofile.write(url + "\r\n")
 
     for tag in content:
         print tag.text
         infofile.write(tag.text + "\r\n")
         print ' '
-    time.sleep(10)
+    time.sleep(5)
     driver.quit()
     # 主函数
 
@@ -38,6 +38,7 @@ if __name__ == '__main__':
     url=''
 
     list1 = [168598, 423895, 2728123, 2771237, 2058048, 70666, 13308108, 419220, 433351, 24754667, 562197, 2019740]
+    # list1 = [2728123]
     while i < len(list1):
         url = 'https://space.bilibili.com/' + str(list1[i]) + '/#/'
         print url
