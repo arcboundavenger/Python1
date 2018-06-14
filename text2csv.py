@@ -9,5 +9,4 @@ with open('Result_Youtube_Edited_'+ datetime.now().date().strftime('%Y%m%d')+'.c
     with open('Result_Youtube_Edited.txt', 'rb') as filein:
         for line in filein:
             line_list = line.strip('\n').split('@@@')
-
             spamwriter.writerow(line_list)
