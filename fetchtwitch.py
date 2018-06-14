@@ -18,12 +18,12 @@ from selenium.webdriver.common.keys import Keys
 def crawl(url):
     driver = webdriver.Firefox(executable_path='C:/Python27/geckodriver')
     driver.get(url)
-    content = driver.find_elements_by_xpath("//div[@class='tw-box-art-card']")
+    content = driver.find_elements_by_xpath("//div[@class='tw-card-body tw-relative']")
 
     for tag in content:
         print tag.text
         infofile.write(tag.text + "\r\n")
-        print ' '
+
     time.sleep(5)
     driver.quit()
     # 主函数
