@@ -9,5 +9,8 @@ with open('Result_Twitch_Edited_'+ datetime.now().date().strftime('%Y%m%d')+'.cs
         lines = []
         for line in filein:
             lines.append(line)
+        for i in range(0,len(lines)):
+            if lines.count('\r\n')>0:
+                lines.remove("\r\n")
         for i in range(0, len(lines)-2, 2):
             spamwriter.writerow([lines[i],lines[i+1]])
