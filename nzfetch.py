@@ -13,6 +13,9 @@ import codecs
 import urllib
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import codecs
+import csv
+from datetime import datetime
 
 
 # 爬虫函数
@@ -46,3 +49,11 @@ if __name__ == '__main__':
     #     i = i + 1
 
     infofile.close()
+    with open('Result_NZ.csv', 'wb') as csvfile:
+        csvfile.write(codecs.BOM_UTF8)
+        spamwriter = csv.writer(csvfile, dialect='excel')
+        # 读要转换的txt文件，文件每行各词间以@@@字符分隔
+        with open('Result_NZ.txt', 'rb') as filein:
+            for line in filein:
+                line_list = line.strip('\n').split('@@@')
+                spamwriter.writerow(line_list)
