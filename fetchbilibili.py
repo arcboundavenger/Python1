@@ -31,8 +31,7 @@ def crawl(url):
 
 
 if __name__ == '__main__':
-    infofile = codecs.open("Result_Bilibili.txt", 'a', 'utf-8')
-
+    infofile = codecs.open("Result_Bilibili.txt", 'w', 'utf-8')
 
     i = 0
     url=''
