@@ -14,8 +14,11 @@ def clearBlankLine():
                 line.remove("\n")
             elif line.count('字幕\n') > 0:
                 line.remove('字幕\n')
+            elif line.count('稍后观看\n') > 0:
+                line.remove('稍后观看\n')
 
         file2.writelines(line)
+
     finally:
         file1.close()
         file2.close()
