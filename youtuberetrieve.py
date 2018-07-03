@@ -24,6 +24,8 @@ def crawl(url):
     for tag in content:
         print tag.text
         infofile.write(tag.text + "\r\n")
+
+
         print ' '
     time.sleep(2)
     driver.quit()
@@ -37,8 +39,8 @@ if __name__ == '__main__':
     i = 0
     url=''
 
-    list1 = ['jacksepticeye', 'markiplierGAME', 'MiniLaddd', 'theRadBrad']
-    #list1 = ['jacksepticeye']
+    list1 = ['jacksepticeye', 'markiplierGAME', 'TheDiamondMinecart', 'MiniLaddd', 'theRadBrad']
+    # list1 = ['jacksepticeye']
     while i < len(list1):
         url = 'https://www.youtube.com/user/' + str(list1[i]) + '/videos'
         print url
