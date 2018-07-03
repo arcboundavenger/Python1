@@ -37,7 +37,7 @@ if __name__ == '__main__':
     i = 0
     url=''
 
-    list1 = ['jacksepticeye', 'markiplierGAME']
+    list1 = ['jacksepticeye', 'markiplierGAME', 'MiniLaddd', 'theRadBrad']
     #list1 = ['jacksepticeye']
     while i < len(list1):
         url = 'https://www.youtube.com/user/' + str(list1[i]) + '/videos'
