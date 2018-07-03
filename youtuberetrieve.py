@@ -25,7 +25,7 @@ def crawl(url):
         print tag.text
         infofile.write(tag.text + "\r\n")
         print ' '
-    time.sleep(5)
+    time.sleep(2)
     driver.quit()
     # 主函数
 
