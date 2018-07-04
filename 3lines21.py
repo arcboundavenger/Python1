@@ -10,7 +10,7 @@ for i in range(0,len(lines)):
     lines[i]=lines[i].replace('\n','@@@')
 
 # print lines
-lines2 = []
+lines2 = ['视频名称@@@观看次数@@@发布时间@@@播主名称@@@粉丝数量\n']
 i=0
 
 list1 = ['VanossGaming', 'jacksepticeye', 'markiplierGAME', 'TheDiamondMinecart', 'theRadBrad', 'MiniLaddd']
@@ -24,4 +24,4 @@ for j in range(0, len(lines)-6, 3):
     elif (re.search('月前', lines[j+2]) != None and re.search('月前', lines[j+5]) == None):
         i=i+1
 
-outfp.writelines(lines2[0:177])
+outfp.writelines(lines2)
