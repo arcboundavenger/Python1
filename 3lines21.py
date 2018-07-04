@@ -24,4 +24,4 @@ for j in range(0, len(lines)-6, 3):
     elif (re.search('月前', lines[j+2]) != None and re.search('月前', lines[j+5]) == None):
         i=i+1
 
-outfp.writelines(lines2)
+outfp.writelines(lines2[0:500])
