@@ -24,7 +24,7 @@ def crawl(url):
     # infofile.write(url + "\r\n")
 
     for tag in content:
-        print (tag.text)
+        #print (tag.text)
         infofile.write(tag.text + "\r\n")
         print (' ')
     time.sleep(5)
