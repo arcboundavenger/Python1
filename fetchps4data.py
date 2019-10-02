@@ -1,25 +1,14 @@
 import time
-import re
-import sys
-import codecs
-import urllib
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import pymouse,pykeyboard,os,sys
-from pymouse import *
-from pykeyboard import PyKeyboard
 import xlrd
 import xlsxwriter
-
-
-
 
 if __name__ == '__main__':
 
     ExcelFile = xlrd.open_workbook(r'C:/Python27/sheet1.xlsx')
     sheet = ExcelFile.sheet_by_index(0)
     cols = sheet.col_values(0)
-    dels cols[0]
+    del cols[0]
     newcols = []
     #读xlsx表
 
