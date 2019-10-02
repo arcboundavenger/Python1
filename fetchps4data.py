@@ -31,6 +31,7 @@ if __name__ == '__main__':
         #找到想要的文字输入框
         textarea.send_keys(i)
         time.sleep(5)
+        #输入文字
         try:
             content = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
             print (content)
@@ -40,7 +41,7 @@ if __name__ == '__main__':
             content = 'N/A'
             newcols.append(content)
             print (content)
-        #一个有可能遇到错误的循环
+        #一个有可能遇到错误的爬取循环
         driver.refresh()
         #存储爬取的数据
 
