@@ -22,7 +22,7 @@ if __name__ == '__main__':
     #打开网页
 
     for i in cols:
-        time.sleep(1)
+        time.sleep(5)
         js2 = "var q=document.getElementById('label_ps4').click()"
         driver.execute_script(js2)
         #点击PS4字样
@@ -30,18 +30,18 @@ if __name__ == '__main__':
         textarea = driver.find_elements_by_xpath("//div[@id='games_filter']//input[@type='search']")[0]
         #找到想要的文字输入框
         textarea.send_keys(i)
-        time.sleep(3)
+        time.sleep(5)
         try:
             content = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
             print (content)
             newcols.append(content)
         except:
+            pass
             content = 'N/A'
             newcols.append(content)
-            continue
+            print (content)
         #一个有可能遇到错误的循环
         driver.refresh()
-        time.sleep(2)
         #存储爬取的数据
 
 
