@@ -31,8 +31,11 @@ if __name__ == '__main__':
 
     for i in cols:
         textarea.send_keys(i)
-        newcols[i] = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
-        time.sleep(5)
+        content = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
+        newcols.append(content)
+        time.sleep(3)
+    #存储爬取的数据
 
     worksheet.write_column('A1', newcols)
-
+    workbook.close()
+    #写入新表
