@@ -30,7 +30,7 @@ if __name__ == '__main__':
         textarea = driver.find_elements_by_xpath("//div[@id='games_filter']//input[@type='search']")[0]
         #找到想要的文字输入框
         textarea.send_keys(i)
-        time.sleep(5)
+        time.sleep(7)
         #输入文字
         try:
             content = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
@@ -42,8 +42,8 @@ if __name__ == '__main__':
             newcols.append(content)
             print (content)
         #一个有可能遇到错误的爬取循环
-        driver.refresh()
-        #存储爬取的数据
+        textarea.clear()
+        #清空文本
 
 
     worksheet.write_column('A1', newcols)
