@@ -32,7 +32,11 @@ if __name__ == '__main__':
         # 找到想要的文字输入框
         textarea.send_keys(i)
         content = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
-        newcols.append(content)
+        print content
+        if content != '':
+            newcols.append(content)
+        else:
+            newcols.append('N/A')
         time.sleep(2)
     #存储爬取的数据
 
