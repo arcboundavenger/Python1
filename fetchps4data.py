@@ -41,7 +41,7 @@ if __name__ == '__main__':
                 content = driver.find_element_by_xpath('//tbody/tr[1]/td[5]').text
                 print (content)
                 newcols.append(content)
-                # 一个有可能遇到错误的爬取循环
+                # 爬取表中owner的部分
             except:
                 pass
                 content = 'N/A'
