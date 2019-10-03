@@ -1,7 +1,6 @@
 import time
 from selenium import webdriver
 import xlrd
-import xlsxwriter
 
 if __name__ == '__main__':
 
@@ -10,11 +9,7 @@ if __name__ == '__main__':
     cols = sheet.col_values(0)
     del cols[0]
     newcols = []
-    #读xlsx表
-
-    workbook = xlsxwriter.Workbook('result_ps4_Exclusive.xlsx')
-    worksheet = workbook.add_worksheet(u'sheet1')
-    #生成空表
+    # 读xlsx表
 
     driver = webdriver.Firefox(executable_path='C:/Python27/geckodriver')
     url = 'http://gamstat.com/games'
@@ -57,7 +52,3 @@ if __name__ == '__main__':
         print('timeout')
         pass
 
-
-    worksheet.write_column('A1', newcols)
-    workbook.close()
-    #写入新表
