@@ -18,8 +18,9 @@ if __name__ == '__main__':
 
     driver = webdriver.Firefox(executable_path='C:/Python27/geckodriver')
     url = 'http://gamstat.com/games'
-
     driver.set_page_load_timeout(600)
+    # 网络不太好，避免timeout把时间设成10分钟
+
     try:
         driver.get(url)
         time.sleep(2)
