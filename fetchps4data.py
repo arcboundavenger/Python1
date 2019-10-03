@@ -2,12 +2,16 @@ import time
 from selenium import webdriver
 import xlrd
 
-if __name__ == '__main__':
-
-    ExcelFile = xlrd.open_workbook(r'C:/Python27/sheet1.xlsx')
+def readxlsx(filename):
+    ExcelFile = xlrd.open_workbook(filename)
     sheet = ExcelFile.sheet_by_index(0)
     cols = sheet.col_values(0)
     del cols[0]
+    return cols
+
+if __name__ == '__main__':
+    filename = r'C:/Python27/sheet1.xlsx'
+    cols = readxlsx(filename)
     newcols = []
     # 读xlsx表
 
