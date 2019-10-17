@@ -30,7 +30,9 @@ def main():
 
     request = youtube.search().list(
         part="snippet",
-        q="risk of rain 2",
+        publishedAfter="2019-10-10T00:00:00Z",
+        publishedBefore="2019-10-13T00:00:00Z",
+        q="The Witcher 3: Wild Hunt",
         type="video",
         videoCategoryId="20"
     )
