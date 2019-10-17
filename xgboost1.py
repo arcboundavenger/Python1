@@ -130,7 +130,7 @@ best_preds = np.asarray([np.argmax(line) for line in preds])
 print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
 print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
 print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
-# plt.show()
+plt.show()
 
 # clf = xgb.XGBClassifier()
 # parameters = {
