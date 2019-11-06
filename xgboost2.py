@@ -166,15 +166,15 @@ print(X_train, y_train)
 #     'num_class': 3
 # }
 
-xgb_model = xgb.XGBClassifier(objective="multi:softprob", nthread=16, num_class=3, seed=1440)
+xgb_model = xgb.XGBClassifier(objective="multi:softprob", nthread=-1, num_class=3, seed=1440)
 
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        # 'learning_rate': [0.01, 0.05, 0.1, 0.2, 0.3],
-        'learning_rate':[0.01],
-        # 'n_estimators':range(50,500,50),
-        'n_estimators': [150],
+        'learning_rate': [0.01, 0.05, 0.1, 0.2, 0.3],
+        # 'learning_rate':[0.01],
+        'n_estimators':range(50,500,50),
+        # 'n_estimators': [150],
         'max_depth':[3],
         'min_child_weight':[1],
         'gamma':[0],
@@ -185,7 +185,7 @@ optimized_GBM = GridSearchCV(
         'scale_pos_weight': [0.2]
     },
     cv=5,
-    verbose=10,
+    verbose=2,
     n_jobs=1
 )
 
