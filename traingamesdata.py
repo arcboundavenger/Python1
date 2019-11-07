@@ -82,7 +82,7 @@ print(plst)
 dtrain = xgb.DMatrix(X_train, y_train)
 
 
-num_rounds = 500
+num_rounds = 5000
 model = xgb.train(plst, dtrain, num_rounds)
 
 
