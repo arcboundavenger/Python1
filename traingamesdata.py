@@ -44,7 +44,7 @@ print(X_train, y_train)
 
 params = {
     'eta': 0.01,
-    'n estimators':620,
+    'n estimators':610,
     'learning rate': 0.01,
     'max_depth': 3,
     'objective': 'multi:softprob',
@@ -58,7 +58,7 @@ params = {
     'silent': 1,
     'seed': 1000,
     'nthread': -1,
-    'num_class': 4
+    'num_class': 6
     }
 
 # In[64]:
@@ -102,14 +102,14 @@ print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
 print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
 plt.show()
 
-#
+
 
 # xgb_model = xgb.XGBClassifier(objective="multi:softprob", nthread=-1, num_class=4, seed=1000)
 #
 # optimized_GBM = GridSearchCV(
 #     xgb_model,
 #     {
-#         'n_estimators': [620],
+#         'n_estimators': [610],
 #         'max_depth': [3],
 #         'min_child_weight': [1],
 #         'gamma': [0.02],
