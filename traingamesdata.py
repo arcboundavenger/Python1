@@ -9,9 +9,9 @@ from sklearn.metrics import precision_score, recall_score, accuracy_score
 from sklearn.model_selection import GridSearchCV
 
 #读游戏的csv表
-s = pd.read_csv(r'C:\Users\Administrator\PycharmProjects\Python1\GamesalesdataV3.csv')
+s = pd.read_csv('GamesalesdataV3.csv')
 X = s.values
-s1 = pd.read_csv(r'C:\Users\Administrator\PycharmProjects\Python1\GamessalesTarget.csv')
+s1 = pd.read_csv('GamessalesTarget.csv')
 y = s1.values
 
 #鸢尾花：
