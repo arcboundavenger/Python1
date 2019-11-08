@@ -8,9 +8,9 @@ from matplotlib import pyplot as plt
 from sklearn.metrics import precision_score, recall_score, accuracy_score
 from sklearn.model_selection import GridSearchCV
 
-s = pd.read_csv(r'C:\Users\arcbo\PycharmProjects\Python1\GamesalesdataV3.csv')
+s = pd.read_csv('GamesalesdataV3.csv')
 X = s.values
-s1 = pd.read_csv(r'C:\Users\arcbo\PycharmProjects\Python1\GamessalesTarget.csv')
+s1 = pd.read_csv('GamessalesTarget.csv')
 y = s1.values
 
 
@@ -58,7 +58,7 @@ params = {
     'silent': 1,
     'seed': 1000,
     'nthread': -1,
-    'num_class': 4
+    'num_class': 6
     }
 
 # In[64]:
