@@ -45,20 +45,20 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 print ('X_train, Y_train')
 print(X_train, y_train)
 
-###############以下是Train/plot过程##################
-
+# ##############以下是Train/plot过程##################
+#
 # params = {
 #     'eta': 0.01,
-#     'n estimators': 610,
+#     'n estimators': 850,
 #     'learning rate': 0.01,
-#     'max_depth': 3,
+#     'max_depth': 4,
 #     'objective': 'multi:softprob',
 #     'gamma': 0.02,
 #     'lambda': 1,
 #     'alpha':0,
 #     'subsample': 0.9,
 #     'colsample_bytree': 0.8,
-#     'min_child_weight': 1,
+#     'min_child_weight': 3,
 #     'silent': 1,
 #     'seed': 100,
 #     'nthread': -1,
@@ -97,32 +97,32 @@ print(X_train, y_train)
 # print(ans)
 #
 # plot_importance(model)
-
-
+#
+#
 # preds = model.predict(dtest)
 # best_preds = np.asarray([np.argmax(line) for line in preds])
 # print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
 # print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
 # print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
 # plt.show()
-
+#
 # model.save_model('0001.model')
 # model.dump_model('dump.raw.txt')
 # dtest.save_binary('dtest.buffer')
 # bst2 = xgb.Booster(model_file='0001.model')
 
-###############以下是GridSearch/fit调参过程##################
+##############以下是GridSearch/fit调参过程##################
 
 xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=6, seed=1000)
 
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        'n_estimators': [760],
-        'max_depth': [3],
-        'min_child_weight': [1],
-        'gamma': [0.03],
-        'subsample': [1],
+        'n_estimators': [850],
+        'max_depth': [4],
+        'min_child_weight': [3],
+        'gamma': [0.6],
+        'subsample': [0.8],
         'colsample_bytree': [0.8],
         'reg_lambda': [1],
         'reg_alpha': [0],
