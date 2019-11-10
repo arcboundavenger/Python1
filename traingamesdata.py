@@ -7,10 +7,14 @@ from xgboost import plot_importance
 from matplotlib import pyplot as plt
 from sklearn.metrics import precision_score, recall_score, accuracy_score
 from sklearn.model_selection import GridSearchCV
+import pickle
+from sklearn.metrics import accuracy_score
 
-s = pd.read_csv(r'C:\Users\arcbo\PycharmProjects\Python1\GamesalesdataV3.csv')
+
+
+s = pd.read_csv('GamesalesdataV3.csv')
 X = s.values
-s1 = pd.read_csv(r'C:\Users\arcbo\PycharmProjects\Python1\GamessalesTarget.csv')
+s1 = pd.read_csv('GamessalesTarget.csv')
 y = s1.values
 
 
@@ -41,99 +45,121 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 print ('X_train, Y_train')
 print(X_train, y_train)
 
+###############以下是Train/plot过程##################
 
-params = {
-    'eta': 0.01,
-    'n estimators':610,
-    'learning rate': 0.01,
-    'max_depth': 3,
-    'objective': 'multi:softprob',
-    'gamma': 0.02,
-    'max_depth': 3,
-    'lambda': 1,
-    'alpha':0,
-    'subsample': 0.9,
-    'colsample_bytree': 0.8,
-    'min_child_weight': 1,
-    'silent': 1,
-    'seed': 1000,
-    'nthread': -1,
-    'num_class': 6
-    }
-
-# In[64]:
-
-
-plst = params.items()
-
-
-# In[65]:
-
-print('params:')
-print(params)
-print('plst:')
-print(plst)
-
-
-# In[68]:
-
-
-
-dtrain = xgb.DMatrix(X_train, y_train)
-
-
-num_rounds = 5000
-model = xgb.train(plst, dtrain, num_rounds)
-
-
-
-dtest = xgb.DMatrix(X_test)
-ans = model.predict(dtest)
-print('ans:')
-print(ans)
-
-plot_importance(model)
-
-
-preds = model.predict(dtest)
-best_preds = np.asarray([np.argmax(line) for line in preds])
-print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
-print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
-print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
-plt.show()
-
-
-
-# xgb_model = xgb.XGBClassifier(objective="multi:softprob", nthread=-1, num_class=4, seed=1000)
+# params = {
+#     'eta': 0.01,
+#     'n estimators': 610,
+#     'learning rate': 0.01,
+#     'max_depth': 3,
+#     'objective': 'multi:softprob',
+#     'gamma': 0.02,
+#     'lambda': 1,
+#     'alpha':0,
+#     'subsample': 0.9,
+#     'colsample_bytree': 0.8,
+#     'min_child_weight': 1,
+#     'silent': 1,
+#     'seed': 100,
+#     'nthread': -1,
+#     'num_class': 6
+#     }
 #
-# optimized_GBM = GridSearchCV(
-#     xgb_model,
-#     {
-#         'n_estimators': [610],
-#         'max_depth': [3],
-#         'min_child_weight': [1],
-#         'gamma': [0.02],
-#         'subsample': [0.9],
-#         'colsample_bytree': [0.8],
-#         'reg_lambda': [1],
-#         'reg_alpha': [0],
-#         'eta': [0.01],
-#         'scale_pos_weight': [0.1],
-#         'learning_rate': [0.01]
-#     },
-#     cv=5,
-#     verbose=5,
-#     n_jobs=-1,
-#     refit=True
-# )
+# # In[64]:
 #
 #
-# #
-# #
-# # model = xgb.XGBRegressor(**other_params)
-# # optimized_GBM = GridSearchCV(estimator=model, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=4)
-# optimized_GBM.fit(X_train, y_train)
-# evalute_result = optimized_GBM.cv_results_
-# # print('每轮迭代运行结果:{0}'.format(evalute_result))
-# print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
-# print('最佳模型得分:{0}'.format(optimized_GBM.best_score_))
+# plst = params.items()
+#
+#
+# # In[65]:
+#
+# print('params:')
+# print(params)
+# print('plst:')
+# print(plst)
+#
+#
+# # In[68]:
+#
+#
+#
+# dtrain = xgb.DMatrix(X_train, y_train)
+#
+#
+# num_rounds = 900
+# model = xgb.train(plst, dtrain, num_rounds)
+#
+#
+#
+# dtest = xgb.DMatrix(X_test)
+# ans = model.predict(dtest)
+# print('ans:')
+# print(ans)
+#
+# plot_importance(model)
+
+
+# preds = model.predict(dtest)
+# best_preds = np.asarray([np.argmax(line) for line in preds])
+# print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
+# print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
+# print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
+# plt.show()
+
+# model.save_model('0001.model')
+# model.dump_model('dump.raw.txt')
+# dtest.save_binary('dtest.buffer')
+# bst2 = xgb.Booster(model_file='0001.model')
+
+###############以下是GridSearch/fit调参过程##################
+
+xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=6, seed=1000)
+
+optimized_GBM = GridSearchCV(
+    xgb_model,
+    {
+        'n_estimators': [760],
+        'max_depth': [3],
+        'min_child_weight': [1],
+        'gamma': [0.03],
+        'subsample': [1],
+        'colsample_bytree': [0.8],
+        'reg_lambda': [1],
+        'reg_alpha': [0],
+        'eta': [0.01],
+        'scale_pos_weight': [0.1],
+        'learning_rate': [0.01]
+    },
+    cv=5,
+    verbose=5,
+    n_jobs=-1,
+    refit=True,
+    scoring='accuracy'
+)
+
+
+# model = xgb.XGBRegressor(**other_params)
+# optimized_GBM = GridSearchCV(estimator=model, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=-1)
+optimized_GBM.fit(X_train, y_train)
+evalute_result = optimized_GBM.cv_results_
+# print('每轮迭代运行结果:{0}'.format(evalute_result))
+print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
+print('最佳模型得分:{0}'.format(optimized_GBM.best_score_))
+
+y_pred = optimized_GBM.predict(X_test)
+accuracy = accuracy_score(y_test,y_pred)
+print("accuracy: %.2f%%" % (accuracy*100.0))
+# plot_importance(optimized_GBM)
+# plt.show()
+# fit_pred = optimized_GBM.predict(X_test)
+# print('Fit_pred:')
+# print (fit_pred)
+
+
+dtest2 = pd.read_csv('gametestdata.csv')
+dtest2 = dtest2.values
+
+
+print('Test_pred:')
+test_pred = optimized_GBM.predict(dtest2)
+print (test_pred)
