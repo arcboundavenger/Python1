@@ -92,9 +92,9 @@ print(X_train, y_train)
 
 
 parameters = {
-    'n_estimators': [103],
+    'n_estimators': [200],
     'learning_rate': [0.1],
-    'max_depth': [5],
+    'max_depth': [4],
     'num_leaves': [11],
     'min_child_samples': [18],
     'min_child_weight': [0.001],
@@ -126,7 +126,7 @@ gbm = lgb.LGBMClassifier(boosting_type='gbdt',
 gsearch = GridSearchCV(gbm, param_grid=parameters, scoring='accuracy', cv=3)
 gsearch.fit(X_train, y_train)
 
-print("Best score: %0.5f" % gsearch.best_score_)
+print("Best score: %0.4f" % gsearch.best_score_)
 print("Best parameters set:")
 best_parameters = gsearch.best_estimator_.get_params()
 for param_name in sorted(parameters.keys()):
