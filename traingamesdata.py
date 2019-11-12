@@ -113,21 +113,32 @@ print(X_train, y_train)
 
 ##############以下是GridSearch/fit调参过程##################
 
-xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=6, seed=1000)
+xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=5, seed=1000)
 
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        'n_estimators': [850],
+        # 'n_estimators': np.linspace(850, 950, 11, dtype=int),
+        'n_estimators': [930],
+        # 'max_depth': np.linspace(1, 10, 10, dtype=int),
+        # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
         'max_depth': [4],
-        'min_child_weight': [3],
-        'gamma': [0.6],
-        'subsample': [0.8],
-        'colsample_bytree': [0.8],
+        'min_child_weight': [2],
+        # 'gamma': np.linspace(0, 1, 11),
+        'gamma': [0.3],
+        # 'subsample': np.linspace(0, 1, 11),
+        # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
+        'subsample': [0.7],
+        'colsample_bytree': [0.7],
+        # 'reg_lambda': np.linspace(0, 100, 11),
+        # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
         'reg_alpha': [0],
+        # 'eta': np.logspace(-2, 0, 10),
         'eta': [0.01],
-        'scale_pos_weight': [0.1],
+        # 'scale_pos_weight': [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],
+        'scale_pos_weight': [0],
+        # 'learning_rate': [0.01, 0.05, 0.07, 0.1, 0.2],
         'learning_rate': [0.01]
     },
     cv=5,
@@ -159,7 +170,7 @@ print("accuracy: %.2f%%" % (accuracy*100.0))
 dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
-
+#
 print('Test_pred:')
 test_pred = optimized_GBM.predict(dtest2)
 print (test_pred)
