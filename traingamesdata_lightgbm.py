@@ -122,7 +122,7 @@ parameters = {
 gbm = lgb.LGBMClassifier(boosting_type='gbdt',
                          objective = 'multiclass',
                          metric = 'multi_error',
-                         num_class = 6,
+                         num_class = 7,
                          verbose = 10,
                          learning_rate = 0.01,
                          num_leaves = 300,
@@ -144,8 +144,8 @@ best_parameters = gsearch.best_estimator_.get_params()
 for param_name in sorted(parameters.keys()):
     print("\t%s: %r" % (param_name, best_parameters[param_name]))
 
-dtest2 = pd.read_csv('gametestdata.csv')
-
-print('Test_pred:')
-test_pred = gsearch.predict(dtest2)
-print (test_pred)
+# dtest2 = pd.read_csv('gametestdata.csv')
+#
+# print('Test_pred:')
+# test_pred = gsearch.predict(dtest2)
+# print (test_pred)

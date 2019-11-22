@@ -11,4 +11,4 @@ columns = {key: [1 if key in sublist else 0 for sublist in separated_data]
 print(columns)
 s1 = pd.DataFrame(columns)
 print(s1)
-s1.to_csv(r'C:\Users\Administrator\PycharmProjects\Python1\mctagcsvresult2.csv')
+s1.to_csv(r'C:\Users\Administrator\PycharmProjects\Python1\mctagcsvresult3.csv')

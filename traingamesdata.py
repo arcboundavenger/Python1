@@ -113,13 +113,14 @@ print(X_train, y_train)
 
 ##############以下是GridSearch/fit调参过程##################
 
-xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=5, seed=1000)
+xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=6, seed=1000)
 
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
+        # 'n_estimators': np.linspace(100, 1000, 10, dtype=int),
         # 'n_estimators': np.linspace(850, 950, 11, dtype=int),
-        'n_estimators': [930],
+        'n_estimators': [940],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
         'max_depth': [4],
