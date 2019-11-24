@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 
 
 
@@ -49,20 +49,20 @@ print(X_train, y_train)
 #
 # params = {
 #     'eta': 0.01,
-#     'n estimators': 850,
+#     'n estimators': 1050,
 #     'learning rate': 0.01,
-#     'max_depth': 4,
+#     'max_depth': 3,
 #     'objective': 'multi:softprob',
-#     'gamma': 0.02,
+#     'gamma': 0.3,
 #     'lambda': 1,
-#     'alpha':0,
-#     'subsample': 0.9,
-#     'colsample_bytree': 0.8,
-#     'min_child_weight': 3,
+#     'alpha': 0,
+#     'subsample': 0.3,
+#     'colsample_bytree': 1,
+#     'min_child_weight': 2,
 #     'silent': 1,
-#     'seed': 100,
+#     'seed': 1000,
 #     'nthread': -1,
-#     'num_class': 6
+#     'num_class': 5
 #     }
 #
 # # In[64]:
@@ -86,7 +86,7 @@ print(X_train, y_train)
 # dtrain = xgb.DMatrix(X_train, y_train)
 #
 #
-# num_rounds = 900
+# num_rounds = 500
 # model = xgb.train(plst, dtrain, num_rounds)
 #
 #
@@ -113,25 +113,25 @@ print(X_train, y_train)
 
 ##############以下是GridSearch/fit调参过程##################
 
-xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=6, seed=1000)
+xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=5, seed=1000)
 
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        # 'n_estimators': np.linspace(100, 1000, 10, dtype=int),
-        # 'n_estimators': np.linspace(850, 950, 11, dtype=int),
-        'n_estimators': [940],
+        # 'n_estimators': np.linspace(500, 1400, 10, dtype=int),
+        # 'n_estimators': np.linspace(950, 1050, 11, dtype=int),
+        'n_estimators': [1050],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [4],
+        'max_depth': [3],
         'min_child_weight': [2],
         # 'gamma': np.linspace(0, 1, 11),
         'gamma': [0.3],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.7],
-        'colsample_bytree': [0.7],
-        # 'reg_lambda': np.linspace(0, 100, 11),
+        'subsample': [0.3],
+        'colsample_bytree': [1],
+        # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
         'reg_alpha': [0],
@@ -172,6 +172,6 @@ dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
 #
-print('Test_pred:')
-test_pred = optimized_GBM.predict(dtest2)
-print (test_pred)
+# print('Test_pred:')
+# test_pred = optimized_GBM.predict(dtest2)
+# print (test_pred)
