@@ -121,13 +121,13 @@ optimized_GBM = GridSearchCV(
         # 'n_estimators': np.linspace(100, 2000, 19, dtype=int),
         # 'n_estimators': np.linspace(1800, 1900, 11, dtype=int),
         'n_estimators': [1850],
-        'max_depth': np.linspace(1, 10, 10, dtype=int),
-        'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        # 'max_depth': [5],
-        # 'min_child_weight': [1],
+        # 'max_depth': np.linspace(1, 10, 10, dtype=int),
+        # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
+        'max_depth': [4],
+        'min_child_weight': [1],
         # 'gamma': np.linspace(0, 1, 11),
-        # 'gamma': np.linspace(0, 0.1, 11),
-        'gamma': [0.1],
+        # 'gamma': np.linspace(0, 0.2, 21),
+        'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
         'subsample': [0.3],
@@ -172,7 +172,7 @@ print("accuracy: %.2f%%" % (accuracy*100.0))
 dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
-#
-# print('Test_pred:')
-# test_pred = optimized_GBM.predict(dtest2)
-# print (test_pred)
+
+print('Test_pred:')
+test_pred = optimized_GBM.predict(dtest2)
+print (test_pred)
