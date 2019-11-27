@@ -5,10 +5,17 @@
 # https://developers.google.com/explorer-help/guides/code_samples#python
 
 import os
-
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
+
+import xlrd
+data = xlrd.open_workbook(filename="NewGames2.xlsx")
+table = data.sheet_by_name('Sheet1')
+title = table.col_values(0)
+startdate = table.col_values(1)
+enddate = table.col_values(2)
+
 
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
@@ -27,18 +34,10 @@ def main():
     credentials = flow.run_console()
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, credentials=credentials)
-
-    request = youtube.search().list(
-        part="snippet",
-        publishedAfter="2019-10-10T00:00:00Z",
-        publishedBefore="2019-10-13T00:00:00Z",
-        q="The Witcher 3: Wild Hunt",
-        type="video",
-        videoCategoryId="20"
-    )
-    response = request.execute()
-
-    print(response)
+    for i in range(0,len(title)):
+        request = youtube.search().list(part="snippet",publishedAfter=startdate[i],publishedBefore=enddate[i],q=title[i],type="video",videoCategoryId="20")
+        response = request.execute()
+        print(response['pageInfo'])
 
 if __name__ == "__main__":
     main()

@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
 
 
@@ -118,16 +118,16 @@ xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=5
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        # 'n_estimators': np.linspace(500, 1400, 10, dtype=int),
-        # 'n_estimators': np.linspace(850, 950, 11, dtype=int),
-        'n_estimators': [850],
-        # 'max_depth': np.linspace(1, 10, 10, dtype=int),
-        # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [4],
-        'min_child_weight': [2],
+        # 'n_estimators': np.linspace(100, 2000, 19, dtype=int),
+        # 'n_estimators': np.linspace(1800, 1900, 11, dtype=int),
+        'n_estimators': [1850],
+        'max_depth': np.linspace(1, 10, 10, dtype=int),
+        'min_child_weight': np.linspace(1, 10, 10, dtype=int),
+        # 'max_depth': [5],
+        # 'min_child_weight': [1],
         # 'gamma': np.linspace(0, 1, 11),
         # 'gamma': np.linspace(0, 0.1, 11),
-        'gamma': [0.02],
+        'gamma': [0.1],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
         'subsample': [0.3],
