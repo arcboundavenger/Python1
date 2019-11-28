@@ -93,13 +93,13 @@ print(X_train, y_train)
 
 parameters = {
     # 'n_estimators': np.linspace(250, 350, 11, dtype=int),
-    'n_estimators': [280],
+    'n_estimators': [290],
     # 'learning_rate': [0.01, 0.02, 0.05, 0.1, 0.15],
     'learning_rate': [0.05],
     # 'max_depth': range(2,20,1),
     # 'num_leaves':range(5, 20, 5),
-    'max_depth': [2],
-    'num_leaves': [5],
+    'max_depth': [6],
+    'num_leaves': [10],
     # 'min_child_samples': range(1, 20, 1),
     # 'min_child_weight':np.logspace(-3, 1, 10),
     'min_child_samples': [8],
@@ -114,6 +114,8 @@ parameters = {
     # 'lambda_l2': [0, 0.001, 0.01, 0.03, 0.08, 0.3, 0.5, 1, 5, 10, 15, 35, 40],
     'lambda_l1': [0.08],
     'lambda_l2': [1],
+    # 'min_split_gain':[0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0],
+    'min_split_gain':[0],
     # 'cat_smooth': [1, 10, 15, 20, 35],
     'cat_smooth': [1]
 
@@ -122,7 +124,7 @@ parameters = {
 gbm = lgb.LGBMClassifier(boosting_type='gbdt',
                          objective = 'multiclass',
                          metric = 'multi_error',
-                         num_class = 7,
+                         num_class = 5,
                          verbose = 10,
                          learning_rate = 0.01,
                          num_leaves = 300,

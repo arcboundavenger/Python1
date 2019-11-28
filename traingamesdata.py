@@ -49,16 +49,16 @@ print(X_train, y_train)
 #
 # params = {
 #     'eta': 0.01,
-#     'n estimators': 1050,
-#     'learning rate': 0.01,
-#     'max_depth': 3,
+#     'n estimators': 360,
+#     'learning rate': 0.1,
+#     'max_depth': 2,
 #     'objective': 'multi:softprob',
-#     'gamma': 0.3,
+#     'gamma': 0.09,
 #     'lambda': 1,
 #     'alpha': 0,
-#     'subsample': 0.3,
-#     'colsample_bytree': 1,
-#     'min_child_weight': 2,
+#     'subsample': 0.6,
+#     'colsample_bytree': 0.3,
+#     'min_child_weight': 4,
 #     'silent': 1,
 #     'seed': 1000,
 #     'nthread': -1,
@@ -86,7 +86,7 @@ print(X_train, y_train)
 # dtrain = xgb.DMatrix(X_train, y_train)
 #
 #
-# num_rounds = 500
+# num_rounds = 1500
 # model = xgb.train(plst, dtrain, num_rounds)
 #
 #
@@ -118,20 +118,20 @@ xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=5
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        # 'n_estimators': np.linspace(100, 2000, 19, dtype=int),
-        # 'n_estimators': np.linspace(1800, 1900, 11, dtype=int),
-        'n_estimators': [1850],
+        'n_estimators': np.linspace(100, 2000, 20, dtype=int),
+        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
+        # 'n_estimators': [110],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [4],
+        'max_depth': [3],
         'min_child_weight': [1],
         # 'gamma': np.linspace(0, 1, 11),
         # 'gamma': np.linspace(0, 0.2, 21),
         'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.3],
-        'colsample_bytree': [1],
+        'subsample': [0.8],
+        'colsample_bytree': [0.8],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
@@ -141,10 +141,10 @@ optimized_GBM = GridSearchCV(
         # 'scale_pos_weight': [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],
         'scale_pos_weight': [0],
         # 'learning_rate': [0.01, 0.05, 0.07, 0.1, 0.2],
-        'learning_rate': [0.01]
+        'learning_rate': [0.1]
     },
-    cv=5,
-    verbose=5,
+    cv=3,
+    verbose=2,
     n_jobs=-1,
     refit=True,
     scoring='accuracy'
@@ -162,7 +162,26 @@ print('最佳模型得分:{0}'.format(optimized_GBM.best_score_))
 y_pred = optimized_GBM.predict(X_test)
 accuracy = accuracy_score(y_test,y_pred)
 print("accuracy: %.2f%%" % (accuracy*100.0))
-# plot_importance(optimized_GBM)
+# xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
+#                                 nthread=-1,
+#                                 num_class=5,
+#                                 seed=1000,
+#                                 learning_rate=0.1,
+#                                 eta=0.01,
+#                                 n_estimators=360,
+#                                 max_depth=2,
+#                                 min_child_weight=4,
+#                                 gamma=0.09,
+#                                 subsample=0.6,
+#                                 colsample_bytree=0.3,
+#                                 reg_lambda=1,
+#                                 reg_alpha=0,
+#                                 scale_pos_weight=0)
+# xgb_model2.fit(X_train, y_train)
+# plot_importance(xgb_model2)
+# y_pred2 = xgb_model2.predict(X_test)
+# accuracy2 = accuracy_score(y_test,y_pred2)
+# print("accuracy: %.2f%%" % (accuracy2*100.0))
 # plt.show()
 # fit_pred = optimized_GBM.predict(X_test)
 # print('Fit_pred:')
