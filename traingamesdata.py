@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=5)
 
 
 
@@ -118,20 +118,20 @@ xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=5
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
-        # 'n_estimators': [110],
+        # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
+        # 'n_estimators': np.linspace(50, 150, 11, dtype=int),
+        'n_estimators': [80],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [3],
-        'min_child_weight': [1],
+        'max_depth': [8],
+        'min_child_weight': [2],
         # 'gamma': np.linspace(0, 1, 11),
-        # 'gamma': np.linspace(0, 0.2, 21),
-        'gamma': [0.0],
+        # 'gamma': np.linspace(0, 0.3, 31),
+        'gamma': [0.07],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.8],
-        'colsample_bytree': [0.8],
+        'subsample': [0.7],
+        'colsample_bytree': [0.5],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
@@ -157,11 +157,11 @@ optimized_GBM.fit(X_train, y_train)
 evalute_result = optimized_GBM.cv_results_
 # print('每轮迭代运行结果:{0}'.format(evalute_result))
 print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
-print('最佳模型得分:{0}'.format(optimized_GBM.best_score_))
+print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*100))
 
 y_pred = optimized_GBM.predict(X_test)
 accuracy = accuracy_score(y_test,y_pred)
-print("accuracy: %.2f%%" % (accuracy*100.0))
+print("测试集准确率: %.2f%%" % (accuracy*100.0))
 # xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
 #                                 nthread=-1,
 #                                 num_class=5,
