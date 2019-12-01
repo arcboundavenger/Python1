@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 from sklearn.metrics import precision_score, recall_score, accuracy_score
 from sklearn.model_selection import GridSearchCV
 import pickle
-from sklearn.metrics import accuracy_score
+from sklearn.decomposition import PCA
 
 
 
@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=5)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=12)
 
 
 
@@ -120,22 +120,22 @@ optimized_GBM = GridSearchCV(
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
         # 'n_estimators': np.linspace(50, 150, 11, dtype=int),
-        'n_estimators': [80],
+        'n_estimators': [70],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [8],
+        'max_depth': [7],
         'min_child_weight': [2],
         # 'gamma': np.linspace(0, 1, 11),
-        # 'gamma': np.linspace(0, 0.3, 31),
-        'gamma': [0.07],
+        # 'gamma': np.linspace(0., 0.2, 21),
+        'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.7],
-        'colsample_bytree': [0.5],
+        'subsample': [0.5],
+        'colsample_bytree': [1],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
-        'reg_lambda': [1],
-        'reg_alpha': [0],
+        'reg_lambda': [3],
+        'reg_alpha': [1],
         # 'eta': np.logspace(-2, 0, 10),
         'eta': [0.01],
         # 'scale_pos_weight': [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],
@@ -144,13 +144,15 @@ optimized_GBM = GridSearchCV(
         'learning_rate': [0.1]
     },
     cv=3,
-    verbose=2,
+    verbose=5,
     n_jobs=-1,
     refit=True,
     scoring='accuracy'
 )
 
-
+# estimator = PCA(n_components=50)   # 使用PCA将原64维度图像压缩为20个维度
+# pca_X_train = estimator.fit_transform(X_train)   # 利用训练特征决定20个正交维度的方向，并转化原训练特征
+# pca_X_test = estimator.transform(X_test)
 # model = xgb.XGBRegressor(**other_params)
 # optimized_GBM = GridSearchCV(estimator=model, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=-1)
 optimized_GBM.fit(X_train, y_train)
@@ -162,18 +164,19 @@ print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*1
 y_pred = optimized_GBM.predict(X_test)
 accuracy = accuracy_score(y_test,y_pred)
 print("测试集准确率: %.2f%%" % (accuracy*100.0))
+#
 # xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
 #                                 nthread=-1,
 #                                 num_class=5,
 #                                 seed=1000,
 #                                 learning_rate=0.1,
 #                                 eta=0.01,
-#                                 n_estimators=360,
-#                                 max_depth=2,
-#                                 min_child_weight=4,
-#                                 gamma=0.09,
-#                                 subsample=0.6,
-#                                 colsample_bytree=0.3,
+#                                 n_estimators=80,
+#                                 max_depth=8,
+#                                 min_child_weight=2,
+#                                 gamma=0.07,
+#                                 subsample=0.7,
+#                                 colsample_bytree=0.5,
 #                                 reg_lambda=1,
 #                                 reg_alpha=0,
 #                                 scale_pos_weight=0)
@@ -192,6 +195,6 @@ dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
 
-print('Test_pred:')
-test_pred = optimized_GBM.predict(dtest2)
-print (test_pred)
+# print('Test_pred:')
+# test_pred = optimized_GBM.predict(dtest2)
+# print (test_pred)
