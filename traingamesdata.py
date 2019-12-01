@@ -164,28 +164,28 @@ print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*1
 y_pred = optimized_GBM.predict(X_test)
 accuracy = accuracy_score(y_test,y_pred)
 print("测试集准确率: %.2f%%" % (accuracy*100.0))
-#
-# xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
-#                                 nthread=-1,
-#                                 num_class=5,
-#                                 seed=1000,
-#                                 learning_rate=0.1,
-#                                 eta=0.01,
-#                                 n_estimators=80,
-#                                 max_depth=8,
-#                                 min_child_weight=2,
-#                                 gamma=0.07,
-#                                 subsample=0.7,
-#                                 colsample_bytree=0.5,
-#                                 reg_lambda=1,
-#                                 reg_alpha=0,
-#                                 scale_pos_weight=0)
-# xgb_model2.fit(X_train, y_train)
-# plot_importance(xgb_model2)
+
+xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
+                                nthread=-1,
+                                num_class=5,
+                                seed=1000,
+                                learning_rate=0.1,
+                                eta=0.01,
+                                n_estimators=70,
+                                max_depth=8,
+                                min_child_weight=2,
+                                gamma=0.0,
+                                subsample=0.5,
+                                colsample_bytree=1,
+                                reg_lambda=3,
+                                reg_alpha=1,
+                                scale_pos_weight=0)
+xgb_model2.fit(X_train, y_train)
+plot_importance(xgb_model2)
 # y_pred2 = xgb_model2.predict(X_test)
 # accuracy2 = accuracy_score(y_test,y_pred2)
 # print("accuracy: %.2f%%" % (accuracy2*100.0))
-# plt.show()
+plt.show()
 # fit_pred = optimized_GBM.predict(X_test)
 # print('Fit_pred:')
 # print (fit_pred)
