@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=12)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=2)
 
 
 
@@ -119,15 +119,15 @@ optimized_GBM = GridSearchCV(
     xgb_model,
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(250, 350, 11, dtype=int),
+        # 'n_estimators': np.linspace(50, 150, 11, dtype=int),
         'n_estimators': [500],
-        # 'max_depth': np.linspace(1, 20, 20, dtype=int),
+        # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
         'max_depth': [4],
         'min_child_weight': [1],
         # 'gamma': np.linspace(0, 1, 11),
-        # 'gamma': np.linspace(0., 0.2, 21),
-        'gamma': [0.01],
+        # 'gamma': np.linspace(0, 0.2, 21),
+        'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
         'subsample': [0.8],
@@ -195,6 +195,6 @@ dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
 
-# print('Test_pred:')
-# test_pred = optimized_GBM.predict(dtest2)
-# print (test_pred)
+print('Test_pred:')
+test_pred = optimized_GBM.predict(dtest2)
+print (test_pred)
