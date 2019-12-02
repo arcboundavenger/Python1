@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
 
 
@@ -119,12 +119,14 @@ optimized_GBM = GridSearchCV(
     xgb_model,
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(50, 150, 11, dtype=int),
-        'n_estimators': [500],
+        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
+        'n_estimators': [190],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [4],
+        'max_depth': [5],
         'min_child_weight': [1],
+        # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
+        'max_delta_step': [0],
         # 'gamma': np.linspace(0, 1, 11),
         # 'gamma': np.linspace(0, 0.2, 21),
         'gamma': [0.0],
