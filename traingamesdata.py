@@ -113,27 +113,27 @@ print(X_train, y_train)
 
 ##############以下是GridSearch/fit调参过程##################
 
-xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=6, seed=1000)
+xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=7, seed=1000)
 
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
-        'n_estimators': [190],
+        # 'n_estimators': np.linspace(250, 350, 11, dtype=int),
+        'n_estimators': [310],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
         'max_depth': [5],
-        'min_child_weight': [1],
+        'min_child_weight': [2],
         # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
-        'max_delta_step': [0],
+        'max_delta_step': [2],
         # 'gamma': np.linspace(0, 1, 11),
         # 'gamma': np.linspace(0, 0.2, 21),
-        'gamma': [0.0],
+        'gamma': [0.14],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.8],
-        'colsample_bytree': [0.8],
+        'subsample': [1],
+        'colsample_bytree': [0.6],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
@@ -174,8 +174,9 @@ print("测试集准确率: %.2f%%" % (accuracy*100.0))
 #                                 learning_rate=0.1,
 #                                 eta=0.01,
 #                                 n_estimators=500,
-#                                 max_depth=4,
+#                                 max_depth=5,
 #                                 min_child_weight=1,
+#                                 max_delta_step=0,
 #                                 gamma=0.0,
 #                                 subsample=0.8,
 #                                 colsample_bytree=0.8,
@@ -197,6 +198,6 @@ dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
 
-print('Test_pred:')
-test_pred = optimized_GBM.predict(dtest2)
-print (test_pred)
+# print('Test_pred:')
+# test_pred = optimized_GBM.predict(dtest2)
+# print (test_pred)
