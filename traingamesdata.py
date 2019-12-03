@@ -198,6 +198,6 @@ dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
 
-# print('Test_pred:')
-# test_pred = optimized_GBM.predict(dtest2)
-# print (test_pred)
+print('Test_pred:')
+test_pred = optimized_GBM.predict(dtest2)
+print (test_pred)
