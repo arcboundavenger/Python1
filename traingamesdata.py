@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=7)
 
 
 
@@ -119,21 +119,21 @@ optimized_GBM = GridSearchCV(
     xgb_model,
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(250, 350, 11, dtype=int),
-        'n_estimators': [310],
+        # 'n_estimators': np.linspace(1250, 1350, 11, dtype=int),
+        'n_estimators': [1300],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-        'max_depth': [5],
-        'min_child_weight': [2],
+        'max_depth': [4],
+        'min_child_weight': [1],
         # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
-        'max_delta_step': [2],
+        'max_delta_step': [0.2],
         # 'gamma': np.linspace(0, 1, 11),
         # 'gamma': np.linspace(0, 0.2, 21),
-        'gamma': [0.14],
+        'gamma': [0.16],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [1],
-        'colsample_bytree': [0.6],
+        'subsample': [0.9],
+        'colsample_bytree': [0.7],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
@@ -173,13 +173,13 @@ print("测试集准确率: %.2f%%" % (accuracy*100.0))
 #                                 seed=1000,
 #                                 learning_rate=0.1,
 #                                 eta=0.01,
-#                                 n_estimators=500,
+#                                 n_estimators=310,
 #                                 max_depth=5,
-#                                 min_child_weight=1,
-#                                 max_delta_step=0,
-#                                 gamma=0.0,
-#                                 subsample=0.8,
-#                                 colsample_bytree=0.8,
+#                                 min_child_weight=2,
+#                                 max_delta_step=2,
+#                                 gamma=0.14,
+#                                 subsample=1,
+#                                 colsample_bytree=0.6,
 #                                 reg_lambda=1,
 #                                 reg_alpha=0,
 #                                 scale_pos_weight=0)
@@ -189,15 +189,15 @@ print("测试集准确率: %.2f%%" % (accuracy*100.0))
 # # accuracy2 = accuracy_score(y_test,y_pred2)
 # # print("accuracy: %.2f%%" % (accuracy2*100.0))
 # plt.show()
-# fit_pred = optimized_GBM.predict(X_test)
-# print('Fit_pred:')
-# print (fit_pred)
+# # fit_pred = optimized_GBM.predict(X_test)
+# # print('Fit_pred:')
+# # print (fit_pred)
 
 
 dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
 
 
-print('Test_pred:')
+print('预测结果:')
 test_pred = optimized_GBM.predict(dtest2)
 print (test_pred)
