@@ -45,22 +45,22 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 print ('X_train, Y_train')
 print(X_train, y_train)
 
-# ##############以下是Train/plot过程##################
-#
+###############以下是Train/plot过程##################
+
 # params = {
 #     'eta': 0.01,
-#     'n estimators': 160,
+#     'n estimators': 500,
 #     'learning rate': 0.1,
 #     'max_depth': 4,
 #     'objective': 'multi:softprob',
 #     'gamma': 0.0,
 #     'lambda': 1,
 #     'alpha': 0,
-#     'subsample': 0.9,
+#     'subsample': 0.8,
 #     'colsample_bytree': 0.8,
 #     'min_child_weight': 1,
 #     'silent': 0,
-#     'max_delta_step':0,
+#     'max_delta_step': 0,
 #     'scale_pos_weight':0,
 #     'seed': 1000,
 #     'nthread': -1,
@@ -86,7 +86,7 @@ print(X_train, y_train)
 #
 #
 #
-# dtrain = xgb.DMatrix(X_train, label=y_train)
+# dtrain = xgb.DMatrix(X_train, y_train)
 # num_rounds = 1500
 # model = xgb.train(plst, dtrain, num_rounds)
 #
@@ -166,10 +166,10 @@ evalute_result = optimized_GBM.cv_results_
 print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
 print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*100))
 
-# y_pred = optimized_GBM.predict(X_test)
-# accuracy = accuracy_score(y_test,y_pred)
-# print("测试集准确率: %.2f%%" % (accuracy*100.0))
-#
+y_pred = optimized_GBM.predict(X_test)
+accuracy = accuracy_score(y_test,y_pred)
+print("测试集准确率: %.2f%%" % (accuracy*100.0))
+
 # xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
 #                                 nthread=-1,
 #                                 num_class=5,
