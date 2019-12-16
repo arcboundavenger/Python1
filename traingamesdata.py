@@ -46,20 +46,22 @@ print ('X_train, Y_train')
 print(X_train, y_train)
 
 # ##############以下是Train/plot过程##################
-
+#
 # params = {
 #     'eta': 0.01,
-#     'n estimators': 500,
+#     'n estimators': 160,
 #     'learning rate': 0.1,
 #     'max_depth': 4,
 #     'objective': 'multi:softprob',
 #     'gamma': 0.0,
 #     'lambda': 1,
 #     'alpha': 0,
-#     'subsample': 0.8,
+#     'subsample': 0.9,
 #     'colsample_bytree': 0.8,
 #     'min_child_weight': 1,
-#     'silent': 1,
+#     'silent': 0,
+#     'max_delta_step':0,
+#     'scale_pos_weight':0,
 #     'seed': 1000,
 #     'nthread': -1,
 #     'num_class': 7
@@ -80,7 +82,7 @@ print(X_train, y_train)
 #
 #
 # # In[68]:
-# feature_name_list=['Dev', 'Pub', 'IP', 'Date', 'Gap', 'Player', 'Price', 'IMDB', 'Rawg', 'Action', 'ActionAdventure', 'Role-Playing','Strategy', 'Adventure', 'First-Person', 'Fighting', 'Puzzle', 'Sandbox', 'Defense', 'MassivelyMultiplayer', 'PC', 'PS4', 'XBOX', 'NS', 'Youtube', 'Twitch', 'UserScore','CriticScore','Ratings','Media','SteamCCU','SteamComments']
+# feature_name_list=['Dev', 'Pub', 'IP', 'Date', 'Gap', 'Player', 'Price', 'IMDB*', 'Rawg', 'Action', 'ActionAdventure', 'Role-Playing','Strategy', 'Adventure', 'First-Person', 'Fighting', 'Puzzle', 'Sandbox', 'Defense', 'MassivelyMultiplayer', 'PC', 'PS4', 'XBOX', 'NS', 'Youtube', 'Twitch', 'UserScore','CriticScore','Ratings','Media','SteamCCU*','SteamComments*']
 #
 #
 #
@@ -92,8 +94,8 @@ print(X_train, y_train)
 #
 # dtest = xgb.DMatrix(X_test)
 # ans = model.predict(dtest)
-# print('ans:')
-# print(ans)
+# # print('ans:')
+# # print(ans)
 #
 #
 # preds = model.predict(dtest)
