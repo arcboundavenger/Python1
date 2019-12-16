@@ -38,7 +38,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=7)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
 
 
@@ -46,23 +46,23 @@ print ('X_train, Y_train')
 print(X_train, y_train)
 
 # ##############以下是Train/plot过程##################
-#
+
 # params = {
 #     'eta': 0.01,
-#     'n estimators': 360,
+#     'n estimators': 500,
 #     'learning rate': 0.1,
-#     'max_depth': 2,
+#     'max_depth': 4,
 #     'objective': 'multi:softprob',
-#     'gamma': 0.09,
+#     'gamma': 0.0,
 #     'lambda': 1,
 #     'alpha': 0,
-#     'subsample': 0.6,
-#     'colsample_bytree': 0.3,
-#     'min_child_weight': 4,
+#     'subsample': 0.8,
+#     'colsample_bytree': 0.8,
+#     'min_child_weight': 1,
 #     'silent': 1,
 #     'seed': 1000,
 #     'nthread': -1,
-#     'num_class': 5
+#     'num_class': 7
 #     }
 #
 # # In[64]:
@@ -80,12 +80,11 @@ print(X_train, y_train)
 #
 #
 # # In[68]:
+# feature_name_list=['Dev', 'Pub', 'IP', 'Date', 'Gap', 'Player', 'Price', 'IMDB', 'Rawg', 'Action', 'ActionAdventure', 'Role-Playing','Strategy', 'Adventure', 'First-Person', 'Fighting', 'Puzzle', 'Sandbox', 'Defense', 'MassivelyMultiplayer', 'PC', 'PS4', 'XBOX', 'NS', 'Youtube', 'Twitch', 'UserScore','CriticScore','Ratings','Media','SteamCCU','SteamComments']
 #
 #
 #
-# dtrain = xgb.DMatrix(X_train, y_train)
-#
-#
+# dtrain = xgb.DMatrix(X_train, label=y_train)
 # num_rounds = 1500
 # model = xgb.train(plst, dtrain, num_rounds)
 #
@@ -96,14 +95,16 @@ print(X_train, y_train)
 # print('ans:')
 # print(ans)
 #
-# plot_importance(model)
-#
 #
 # preds = model.predict(dtest)
 # best_preds = np.asarray([np.argmax(line) for line in preds])
 # print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
 # print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
 # print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
+#
+# model.feature_names = feature_name_list
+#
+# plot_importance(model, importance_type='weight')
 # plt.show()
 #
 # model.save_model('0001.model')
@@ -119,21 +120,21 @@ optimized_GBM = GridSearchCV(
     xgb_model,
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(1250, 1350, 11, dtype=int),
-        'n_estimators': [1300],
+        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
+        'n_estimators': [160],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
         'max_depth': [4],
         'min_child_weight': [1],
         # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
-        'max_delta_step': [0.2],
+        'max_delta_step': [0],
         # 'gamma': np.linspace(0, 1, 11),
         # 'gamma': np.linspace(0, 0.2, 21),
-        'gamma': [0.16],
+        'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
         'subsample': [0.9],
-        'colsample_bytree': [0.7],
+        'colsample_bytree': [0.8],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
@@ -173,26 +174,23 @@ print("测试集准确率: %.2f%%" % (accuracy*100.0))
 #                                 seed=1000,
 #                                 learning_rate=0.1,
 #                                 eta=0.01,
-#                                 n_estimators=310,
-#                                 max_depth=5,
-#                                 min_child_weight=2,
-#                                 max_delta_step=2,
-#                                 gamma=0.14,
-#                                 subsample=1,
-#                                 colsample_bytree=0.6,
+#                                 n_estimators=500,
+#                                 max_depth=4,
+#                                 min_child_weight=1,
+#                                 max_delta_step=0,
+#                                 gamma=0,
+#                                 subsample=0.8,
+#                                 colsample_bytree=0.8,
 #                                 reg_lambda=1,
 #                                 reg_alpha=0,
 #                                 scale_pos_weight=0)
 # xgb_model2.fit(X_train, y_train)
-# plot_importance(xgb_model2)
+# plot_importance(xgb_model2, importance_type='weight')
 # # y_pred2 = xgb_model2.predict(X_test)
 # # accuracy2 = accuracy_score(y_test,y_pred2)
 # # print("accuracy: %.2f%%" % (accuracy2*100.0))
 # plt.show()
-# # fit_pred = optimized_GBM.predict(X_test)
-# # print('Fit_pred:')
-# # print (fit_pred)
-
+#
 
 dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
