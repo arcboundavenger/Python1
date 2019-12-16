@@ -82,7 +82,7 @@ print(X_train, y_train)
 #
 #
 # # In[68]:
-# feature_name_list=['Dev', 'Pub', 'IP', 'Date', 'Gap', 'Player', 'Price', 'IMDB*', 'Rawg', 'Action', 'ActionAdventure', 'Role-Playing','Strategy', 'Adventure', 'First-Person', 'Fighting', 'Puzzle', 'Sandbox', 'Defense', 'MassivelyMultiplayer', 'PC', 'PS4', 'XBOX', 'NS', 'Youtube', 'Twitch', 'UserScore','CriticScore','Ratings','Media','SteamCCU*','SteamComments*']
+# feature_name_list=['Dev', 'Pub', 'IP', 'Date', 'Gap', 'PlayerType', 'Price', 'IMDB*', 'Rawg', 'Action', 'ActionAdventure', 'Role-Playing','Strategy', 'Adventure', 'First-Person', 'Fighting', 'Puzzle', 'Sandbox', 'Defense', 'MassivelyMultiplayer', 'PC', 'PS4', 'XBOX', 'NS', 'Youtube', 'Twitch', 'UserScore','CriticScore','Ratings','Media','SteamCCU*','SteamComments*']
 #
 #
 #
@@ -166,10 +166,10 @@ evalute_result = optimized_GBM.cv_results_
 print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
 print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*100))
 
-y_pred = optimized_GBM.predict(X_test)
-accuracy = accuracy_score(y_test,y_pred)
-print("测试集准确率: %.2f%%" % (accuracy*100.0))
-
+# y_pred = optimized_GBM.predict(X_test)
+# accuracy = accuracy_score(y_test,y_pred)
+# print("测试集准确率: %.2f%%" % (accuracy*100.0))
+#
 # xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
 #                                 nthread=-1,
 #                                 num_class=5,
@@ -187,12 +187,14 @@ print("测试集准确率: %.2f%%" % (accuracy*100.0))
 #                                 reg_alpha=0,
 #                                 scale_pos_weight=0)
 # xgb_model2.fit(X_train, y_train)
-# plot_importance(xgb_model2, importance_type='weight')
+#
 # # y_pred2 = xgb_model2.predict(X_test)
 # # accuracy2 = accuracy_score(y_test,y_pred2)
 # # print("accuracy: %.2f%%" % (accuracy2*100.0))
-# plt.show()
 #
+# plot_importance(xgb_model2, importance_type='weight')
+# plt.show()
+
 
 dtest2 = pd.read_csv('gametestdata.csv')
 dtest2 = dtest2.values
