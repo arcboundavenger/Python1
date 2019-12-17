@@ -7,7 +7,6 @@ from xgboost import plot_importance
 from matplotlib import pyplot as plt
 from sklearn.metrics import precision_score, recall_score, accuracy_score
 from sklearn.model_selection import GridSearchCV
-import pickle
 from sklearn.decomposition import PCA
 
 
@@ -122,8 +121,8 @@ optimized_GBM = GridSearchCV(
     xgb_model,
     {
         # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
-        'n_estimators': [160],
+        # 'n_estimators': np.linspace(50, 150, 11, dtype=int),
+        'n_estimators': [500],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
         'max_depth': [4],
@@ -135,7 +134,7 @@ optimized_GBM = GridSearchCV(
         'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.9],
+        'subsample': [0.8],
         'colsample_bytree': [0.8],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
