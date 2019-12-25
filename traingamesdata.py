@@ -33,7 +33,7 @@ print(type(y))
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=6)
 
 print('type X_train, type Y_train')
 print(type(X_train), type(y_train))
@@ -46,8 +46,8 @@ xgb_model = xgb.XGBClassifier(objective="multi:softmax", nthread=-1, num_class=8
 optimized_GBM = GridSearchCV(
     xgb_model,
     {
-        # 'n_estimators': np.linspace(100, 2000, 20, dtype=int),
-        # 'n_estimators': np.linspace(150, 250, 11, dtype=int),
+        # 'n_estimators': np.linspace(100, 1000, 10, dtype=int),
+        # 'n_estimators': np.linspace(250, 350, 11, dtype=int),
         'n_estimators': [500],
         # 'max_depth': np.linspace(1, 10, 10, dtype=int),
         # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
@@ -56,12 +56,12 @@ optimized_GBM = GridSearchCV(
         # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
         'max_delta_step': [0],
         # 'gamma': np.linspace(0, 1, 11),
-        # 'gamma': np.linspace(0, 0.2, 21),
+        # 'gamma': np.linspace(0, 0.1, 11),
         'gamma': [0.0],
         # 'subsample': np.linspace(0, 1, 11),
         # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-        'subsample': [0.8],
-        'colsample_bytree': [0.8],
+        'subsample': [.8],
+        'colsample_bytree': [.8],
         # 'reg_lambda': np.linspace(0, 10, 11),
         # 'reg_alpha': np.linspace(0, 10, 11),
         'reg_lambda': [1],
@@ -101,26 +101,19 @@ print("测试集准确率: %.2f%%" % (accuracy*100.0))
 #                                 seed=1000,
 #                                 learning_rate=0.1,
 #                                 eta=0.01,
-#                                 n_estimators=200,
-#                                 max_depth=10,
-#                                 min_child_weight=3,
+#                                 n_estimators=280,
+#                                 max_depth=4,
+#                                 min_child_weight=1,
 #                                 max_delta_step=0,
 #                                 gamma=0,
-#                                 subsample=0.8,
-#                                 colsample_bytree=0.8,
-#                                 reg_lambda=1,
+#                                 subsample=1,
+#                                 colsample_bytree=0.2,
+#                                 reg_lambda=4,
 #                                 reg_alpha=0,
 #                                 scale_pos_weight=0)
 # xgb_model2.fit(X_train, y_train)
 # plot_importance(xgb_model2, importance_type='weight')
 # plt.show()
-# y_pred2 = xgb_model2.predict(X_test)
-# accuracy2 = accuracy_score(y_test,y_pred2)
-# print("accuracy: %.2f%%" % (accuracy2*100.0))
-
-
-
-
 
 ###############以下是Train/plot过程##################
 #
