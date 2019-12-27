@@ -34,7 +34,7 @@ CVAccuracy=[]
 TestAccuracy=[]
 
 
-for j in range(0,20,1):
+for j in range(20,21,1):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=j)
 
@@ -50,21 +50,21 @@ for j in range(0,20,1):
         xgb_model,
         {
             # 'n_estimators': np.linspace(50, 1000, 20, dtype=int),
-            # 'n_estimators': np.linspace(10, 110, 11, dtype=int),
-            'n_estimators': [500],
+            # 'n_estimators': np.linspace(50, 150, 11, dtype=int),
+            'n_estimators': [90],
             # 'max_depth': np.linspace(1, 10, 10, dtype=int),
             # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-            'max_depth': [5],
-            'min_child_weight': [1],
+            'max_depth': [6],
+            'min_child_weight': [2],
             # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
             'max_delta_step': [0],
             # 'gamma': np.linspace(0, 1, 11),
-            # 'gamma': np.linspace(0.1, 0.3, 21),
-            'gamma': [0],
+            # 'gamma': np.linspace(0, 0.1, 11),
+            'gamma': [0.01],
             # 'subsample': np.linspace(0, 1, 11),
             # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-            'subsample': [.8],
-            'colsample_bytree': [.8],
+            'subsample': [.9],
+            'colsample_bytree': [.3],
             # 'reg_lambda': np.linspace(0, 10, 11),
             # 'reg_alpha': np.linspace(0, 10, 11),
             'reg_lambda': [1],
@@ -77,7 +77,7 @@ for j in range(0,20,1):
             'learning_rate': [0.1]
         },
         cv=3,
-        verbose=0,
+        verbose=5,
         n_jobs=-1,
         refit=True,
         scoring='accuracy'
@@ -100,11 +100,11 @@ for j in range(0,20,1):
     accuracy = accuracy_score(y_test,y_pred)
     print("测试集准确率: %.2f%%" % (accuracy*100.0))
 
-    CVAccuracy.append(optimized_GBM.best_score_*100)
-    TestAccuracy.append(accuracy*100.0)
-
-print(CVAccuracy)
-print(TestAccuracy)
+#     CVAccuracy.append(optimized_GBM.best_score_*100)
+#     TestAccuracy.append(accuracy*100.0)
+#
+# print(CVAccuracy)
+# print(TestAccuracy)
 
 #
 # xgb_model2 =  xgb.XGBClassifier(objective="multi:softmax",
@@ -197,14 +197,14 @@ print(TestAccuracy)
 #
 # #################以下是预测过程#############
 #
-#
-# dtest2 = pd.read_csv('gametestdata.csv')
-# # dtest2 = dtest2.values
-#
-#
-# print('预测结果:')
-# test_pred = optimized_GBM.predict(dtest2)
-# print (test_pred)
+
+dtest2 = pd.read_csv('gametestdata.csv')
+# dtest2 = dtest2.values
+
+
+print('预测结果:')
+test_pred = optimized_GBM.predict(dtest2)
+print (test_pred)
 
 # # save model to file
 # pickle.dump(xgb_model2, open("xgb1", "wb"))
