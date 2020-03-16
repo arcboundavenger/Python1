@@ -44,47 +44,47 @@ for j in range(3,4,1):
 
     ##############以下是GridSearch/fit调参过程##################
 
-    xgb_model = xgb.XGBClassifier(objective="multi:softmax",
+    xgb_model = xgb.XGBRegressor(objective="reg:gamma",
                                   nthread=-1,
-                                  num_class=7,
+                                  # num_class=7,
                                   seed=1000)
 
-#     optimized_GBM = GridSearchCV(
-#         xgb_model,
-#         {
-#             # 'n_estimators': np.linspace(50, 1000, 20, dtype=int),
-#             # 'n_estimators': np.linspace(100, 200, 11, dtype=int),
-#             'n_estimators': [500],
-#             # 'max_depth': np.linspace(1, 10, 10, dtype=int),
-#             # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
-#             'max_depth': [5],
-#             'min_child_weight': [1],
-#             # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
-#             'max_delta_step': [0],
-#             # 'gamma': np.linspace(0, 1, 11),
-#             # 'gamma': np.linspace(0, 0.1, 11),
-#             'gamma': [0.0],
-#             # 'subsample': np.linspace(0, 1, 11),
-#             # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
-#             'subsample': [0.8],
-#             'colsample_bytree': [.8],
-#             # 'reg_lambda': np.linspace(0, 10, 11),
-#             # 'reg_alpha': np.linspace(0, 10, 11),
-#             'reg_lambda': [1],
-#             'reg_alpha': [0],
-#             # 'eta': np.logspace(-2, 0, 10),
-#             'eta': [0.01],
-#             # 'scale_pos_weight': [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],
-#             'scale_pos_weight': [0],
-#             # 'learning_rate': [0.01, 0.05, 0.07, 0.1, 0.2],
-#             'learning_rate': [0.1]
-#         },
-#         cv=3,
-#         verbose=5,
-#         n_jobs=-1,
-#         refit=True,
-#         scoring='accuracy'
-#     )
+    optimized_GBM = GridSearchCV(
+        xgb_model,
+        {
+            # 'n_estimators': np.linspace(50, 1000, 20, dtype=int),
+            # 'n_estimators': np.linspace(100, 200, 11, dtype=int),
+            'n_estimators': [500],
+            # 'max_depth': np.linspace(1, 10, 10, dtype=int),
+            # 'min_child_weight': np.linspace(1, 10, 10, dtype=int),
+            'max_depth': [5],
+            # 'min_child_weight': [1],
+            # # 'max_delta_step': [0, 0.2, 0.6, 1, 2],
+            # 'max_delta_step': [0],
+            # # 'gamma': np.linspace(0, 1, 11),
+            # # 'gamma': np.linspace(0, 0.1, 11),
+            # 'gamma': [0.0],
+            # # 'subsample': np.linspace(0, 1, 11),
+            # # 'colsample_bytree': np.linspace(0, 1, 11)[1:],
+            # 'subsample': [0.8],
+            # 'colsample_bytree': [.8],
+            # # 'reg_lambda': np.linspace(0, 10, 11),
+            # # 'reg_alpha': np.linspace(0, 10, 11),
+            # 'reg_lambda': [1],
+            # 'reg_alpha': [0],
+            # # 'eta': np.logspace(-2, 0, 10),
+            # 'eta': [0.01],
+            # # 'scale_pos_weight': [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],
+            # 'scale_pos_weight': [0],
+            # 'learning_rate': [0.01, 0.05, 0.07, 0.1, 0.2],
+            'learning_rate': [0.1]
+        },
+        cv=3,
+        verbose=5,
+        n_jobs=-1,
+        refit=True,
+        scoring='r2'
+    )
 #
 #     # estimator = PCA(n_components=50)   # 使用PCA将原64维度图像压缩为20个维度
 #     # pca_X_train = estimator.fit_transform(X_train)   # 利用训练特征决定20个正交维度的方向，并转化原训练特征
@@ -94,11 +94,11 @@ for j in range(3,4,1):
 #     optimized_GBM.fit(X_train, y_train)
 #     evalute_result = optimized_GBM.cv_results_
 #
-#     print(j)
-#     # print('每轮迭代运行结果:{0}'.format(evalute_result))
-#     print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
-#     print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*100))
-#
+    print(j)
+    # print('每轮迭代运行结果:{0}'.format(evalute_result))
+    # print('参数的最佳取值：{0}'.format(optimized_GBM.best_params_))
+    # print('模型最佳交叉验证准确率: %.2f%%' % (optimized_GBM.best_score_*100))
+
 #     y_pred = optimized_GBM.predict(X_test)
 #     accuracy = accuracy_score(y_test,y_pred)
 #     print("测试集准确率: %.2f%%" % (accuracy*100.0))
@@ -145,8 +145,8 @@ pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
 print(pd_data)
 pd_data.to_csv('submit.csv', index=None)
 # print(accuracy_score(np_data[:,0], np_data[:,1]))
-# plot_importance(xgb_model2, importance_type='weight')
-# plt.show()
+plot_importance(xgb_model2, importance_type='weight')
+plt.show()
 
 ###############以下是Train/plot过程##################
 #
