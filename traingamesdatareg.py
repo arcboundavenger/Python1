@@ -30,10 +30,10 @@ print('type X')
 print(type(X))
 print('type Y')
 print(type(y))
-j=100
-new_pred=np.zeros((j,15))
+j=40 #随机多少次，可以改的大一些
+new_pred=np.zeros((j,2)) #20代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
-for ii in range(0,j):
+for ii in range(j,j+1):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
 
 
@@ -45,8 +45,7 @@ for ii in range(0,j):
         param_grid = dict(max_depth=max_depth, n_estimators=n_estimators, learning_rate=learning_rate)
         regress_model = xgb.XGBRegressor(objective="reg:squarederror", nthread=-1, seed=1000)
         gs = GridSearchCV(regress_model, param_grid, verbose=1, refit=True, scoring='r2', cv=3, n_jobs=-1)
-        gs.fit(X_train, y_train)  # X为训练数据的特征值，y为训练数据的label
-            # 性能测评
+        gs.fit(X_train, y_train)
         print(ii)
         print("参数的最佳取值：:", gs.best_params_)
         print("最佳模型得分:", gs.best_score_)
@@ -58,13 +57,19 @@ for ii in range(0,j):
         y_tests=np.array(y_test)
         print(r2_score(y_tests,y_pred))
 
-        # for row in range(0, y_pred_len):
-        #         data_arr.append([y_tests[row][0], y_pred[row]])
-        # np_data = np.array(data_arr)
-        # pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
-        # pd_data.to_csv('submit.csv', index=None)
-        # plot_importance(xgb_model2, importance_type='weight')
-        # plt.show()
+        for row in range(0, y_pred_len):
+                data_arr.append([y_tests[row][0], y_pred[row]])
+        np_data = np.array(data_arr)
+        pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
+        pd_data.to_csv('submit.csv', index=None)
+        ax1 = plt.subplot(221)
+        ax2 = plt.subplot(222)
+        ax3 = plt.subplot(223)
+        plot_importance(xgb_model2, importance_type='total_gain', ax=ax1, title='Feature Importance (total_gain)', xlabel='Feature Score')
+        plot_importance(xgb_model2, importance_type='gain', ax=ax2, title='Feature Importance (gain)', xlabel='Feature Score')
+        plot_importance(xgb_model2, importance_type='weight', ax=ax3, title='Feature Importance (weight)', xlabel='Feature Score')
+
+        plt.show()
 
         ###############以下是Train/plot过程##################
         #
@@ -137,26 +142,23 @@ for ii in range(0,j):
         # #################以下是预测过程#############
         #
 
-        dtest2 = pd.read_csv('gametestdata.csv')
+        dtest2 = pd.read_csv('gametestdata.csv') #这个地方是要预测的游戏的x值列表
         # dtest2 = dtest2.values
 
 
         # print('预测结果:')
-        test_pred = xgb_model2.predict(dtest2)
-
-        for i in range(0,len(test_pred)):
-                # new_pred[ii].append(int(math.exp(test_pred[i])))
-                new_pred[ii][i]=int(math.exp(test_pred[i]))
-pd.DataFrame(new_pred).to_csv('PredictResult.csv', index=None)
+#         test_pred = xgb_model2.predict(dtest2)
 #
-# # save model to file
+#         for i in range(0,len(test_pred)):
+#                 new_pred[ii][i]=int(math.exp(test_pred[i])) #这里的数字是销量的对数，我在里面用math.exp还原了
+# pd.DataFrame(new_pred).to_csv('PredictResult.csv', index=None)
+#
+# 把模型存起来
 # pickle.dump(xgb_model2, open("xgb1", "wb"))
-#
-# # some time later...
-#
-# # load model from file
+
+# 读取模型
 # loaded_model = pickle.load(open("xgb1", "rb"))
 #
-# # make predictions for test data
+# 用读取的模型预测
 # test_pred = loaded_model.predict(dtest2)
 # print(test_pred)
