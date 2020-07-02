@@ -1,6 +1,4 @@
 import pandas as pd
-# d = {'col1': ['aa,bb', 'bb', 'cc,dd', 'aa,cc']}
-# s = pd.DataFrame(d)
 s = pd.read_csv('mctagcsv2.csv')
 separated_data = [el.split(',') for el in s['col1']]
 keys = set([key for sublist in separated_data for key in sublist])

@@ -1,12 +1,8 @@
 from pytrends.request import TrendReq
-from pandas import Series,DataFrame
 import pandas as pd
-import csv
 import xlrd
-import time
 import numpy as np
 
-# Login to Google. Only need to run this once, the rest of requests will use the same session.
 pytrend = TrendReq()
 
 
@@ -17,17 +13,12 @@ def readxlsx(filename):
     del cols[0]
     return cols
 
-cols1 = readxlsx('GameList.xlsx')
-KnackIndex=np.zeros(1200)
+cols1 = readxlsx('GameList.xlsx') #这个地方的xlsx要改成你存储游戏名的xlsx，你用sql的话相应的换一下
+KnackIndex=np.zeros(1200) #这个地方的1200是我表格中的游戏数，有多少游戏就改成多少
 for i in range(0, len(cols1),1):
     pytrend.build_payload(kw_list=['Knack', cols1[i]], cat=0, timeframe='2013-01-01 2020-3-20', geo ='', gprop='')
     df = pytrend.interest_over_time()
     print(pytrend.interest_over_time())
-    # df.to_csv('GoogleTrendsTest'+ str(i) +'.csv',header=True,index=True)
     KnackIndex[i] = df[cols1[i]].max()/df['Knack'].max()
     print(KnackIndex[i])
-    # KnackIndex[i+1] = df[cols1[i+1]].argmax()/df['Knack'].argmax()
-    # KnackIndex[i+2] = df[cols1[i+2]].argmax()/df['Knack'].argmax()
-    # KnackIndex[i+3] = df[cols1[i+3]].argmax()/df['Knack'].argmax()
-    pd.DataFrame(KnackIndex).to_csv('GoogleTrendsTest.csv')
-
+    pd.DataFrame(KnackIndex).to_csv('GoogleTrendsTest.csv') #这个地方输出的csv是我存储游戏名的，你用sql的话相应的换一下

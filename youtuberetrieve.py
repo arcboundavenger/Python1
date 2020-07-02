@@ -22,11 +22,11 @@ def crawl(url):
     content = driver.find_elements_by_xpath("//div[@id='items']")
 
     for tag in content:
-        print tag.text
+        print(tag.text)
         infofile.write(tag.text + "\r\n")
 
 
-        print ' '
+        print(' ')
     time.sleep(2)
     driver.quit()
     # 主函数
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     # list1 = ['jacksepticeye']
     while i < len(list1):
         url = 'https://www.youtube.com/user/' + str(list1[i]) + '/videos'
-        print url
+        print(url)
 
         crawl(url)
         infofile.write("\r\n\r\n\r\n")
