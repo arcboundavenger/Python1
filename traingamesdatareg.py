@@ -30,10 +30,10 @@ print('type X')
 print(type(X))
 print('type Y')
 print(type(y))
-j=40 #随机多少次，可以改的大一些
+j=100 #随机多少次，可以改的大一些
 new_pred=np.zeros((j,2)) #20代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
-for ii in range(j,j+1):
+for ii in range(0,j+1):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
 
 
@@ -62,12 +62,12 @@ for ii in range(j,j+1):
         np_data = np.array(data_arr)
         pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
         pd_data.to_csv('submit.csv', index=None)
-        ax1 = plt.subplot(221)
-        ax2 = plt.subplot(222)
-        ax3 = plt.subplot(223)
-        plot_importance(xgb_model2, importance_type='total_gain', ax=ax1, title='Feature Importance (total_gain)', xlabel='Feature Score')
-        plot_importance(xgb_model2, importance_type='gain', ax=ax2, title='Feature Importance (gain)', xlabel='Feature Score')
-        plot_importance(xgb_model2, importance_type='weight', ax=ax3, title='Feature Importance (weight)', xlabel='Feature Score')
+        # ax1 = plt.subplot(111)
+        # ax2 = plt.subplot(111)
+        # ax3 = plt.subplot(111)
+        # plot_importance(xgb_model2, importance_type='total_gain', ax=ax1, title='Feature Importance (total_gain)', xlabel='Feature Score')
+        # plot_importance(xgb_model2, importance_type='gain', ax=ax2, title='Feature Importance (gain)', xlabel='Feature Score')
+        # plot_importance(xgb_model2, importance_type='weight', ax=ax3, title='Feature Importance (weight)', xlabel='Feature Score')
 
         plt.show()
 
