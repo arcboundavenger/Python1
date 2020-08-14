@@ -12,19 +12,12 @@ import xgboost as xgb
 from xgboost import plot_importance
 import pickle
 
-
-
 X = pd.read_csv('GamesalesdataV3.csv')
 y = pd.read_csv('GamessalesTargetV2.csv')
-
-
-
 
 file = open('GamesalesdataV3.csv', 'r')
 lines = file.readlines()
 feature_name_list = lines[0].split(",")
-
-
 
 print('type X')
 print(type(X))
@@ -33,7 +26,7 @@ print(type(y))
 j=100 #随机多少次，可以改的大一些
 new_pred=np.zeros((j,2)) #20代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
-for ii in range(0,j+1):
+for ii in range(0,j):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
 
 
@@ -61,12 +54,13 @@ for ii in range(0,j+1):
                 data_arr.append([y_tests[row][0], y_pred[row]])
         np_data = np.array(data_arr)
         pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
-        pd_data.to_csv('submit.csv', index=None)
+        # pd_data.to_csv('submit.csv', index=None)
         # ax1 = plt.subplot(111)
         # ax2 = plt.subplot(111)
+        # fig, ax = plt.subplots(figsize=(12,12))
         # ax3 = plt.subplot(111)
-        # plot_importance(xgb_model2, importance_type='total_gain', ax=ax1, title='Feature Importance (total_gain)', xlabel='Feature Score')
-        # plot_importance(xgb_model2, importance_type='gain', ax=ax2, title='Feature Importance (gain)', xlabel='Feature Score')
+        # plot_importance(xgb_model2, importance_type='total_gain', ax=ax, title='Feature Importance (total_gain)', xlabel='Feature Score')
+        # plot_importance(xgb_model2, importance_type='gain', ax=ax, title='Feature Importance (gain)', xlabel='Feature Score')
         # plot_importance(xgb_model2, importance_type='weight', ax=ax3, title='Feature Importance (weight)', xlabel='Feature Score')
 
         plt.show()
@@ -147,11 +141,11 @@ for ii in range(0,j+1):
 
 
         # print('预测结果:')
-#         test_pred = xgb_model2.predict(dtest2)
-#
-#         for i in range(0,len(test_pred)):
-#                 new_pred[ii][i]=int(math.exp(test_pred[i])) #这里的数字是销量的对数，我在里面用math.exp还原了
-# pd.DataFrame(new_pred).to_csv('PredictResult.csv', index=None)
+        test_pred = xgb_model2.predict(dtest2)
+
+        for i in range(0,len(test_pred)):
+                new_pred[ii][i]=int(math.exp(test_pred[i])) #这里的数字是销量的对数，我在里面用math.exp还原了
+pd.DataFrame(new_pred).to_csv('PredictResult.csv', index=None)
 #
 # 把模型存起来
 # pickle.dump(xgb_model2, open("xgb1", "wb"))

@@ -1,0 +1,1 @@
+我把IMDB和Vgtime合并成一个IsFamous值了，所用的逻辑是“如果这个游戏的IMDB或Vgtime不为0，则IsFamous为1；反之为0”。这个值在前端手动给我填写就行。
