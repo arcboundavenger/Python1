@@ -23,8 +23,8 @@ print('type X')
 print(type(X))
 print('type Y')
 print(type(y))
-j=100 #随机多少次，可以改的大一些
-new_pred=np.zeros((j,2)) #20代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
+j=1 #随机多少次，可以改的大一些
+new_pred=np.zeros((j,4)) #20代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
 for ii in range(0,j):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
@@ -63,7 +63,12 @@ for ii in range(0,j):
         # plot_importance(xgb_model2, importance_type='gain', ax=ax, title='Feature Importance (gain)', xlabel='Feature Score')
         # plot_importance(xgb_model2, importance_type='weight', ax=ax3, title='Feature Importance (weight)', xlabel='Feature Score')
 
-        plt.show()
+        # plt.show()
+        # r2_1 = gs.best_score_
+        # r2_2 = r2_score(y_tests,y_pred)
+        # if r2_1<0.88 or r2_2<0.88:
+        #         print('Drop it!')
+        #         continue
 
         ###############以下是Train/plot过程##################
         #
@@ -144,7 +149,7 @@ for ii in range(0,j):
         test_pred = xgb_model2.predict(dtest2)
 
         for i in range(0,len(test_pred)):
-                new_pred[ii][i]=int(math.exp(test_pred[i])) #这里的数字是销量的对数，我在里面用math.exp还原了
+                new_pred[ii][i]=math.exp(test_pred[i]) #这里的数字是销量的对数，我在里面用math.exp还原了
 pd.DataFrame(new_pred).to_csv('PredictResult.csv', index=None)
 #
 # 把模型存起来
