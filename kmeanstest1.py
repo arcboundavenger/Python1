@@ -35,7 +35,7 @@ data=min_max_scale.fit_transform(data)
 ##################################################
 #调用k-means算法，进行聚类分析
 k = 5 # 定义聚类个数
-kmodel = KMeans(n_clusters=k, init='k-means++', max_iter=300, n_init=10, random_state=1)
+kmodel = KMeans(n_clusters=k, init='k-means++', max_iter=300, n_init=10, random_state=3)
 kmodel.fit(data)
 
 #查看聚类中心
