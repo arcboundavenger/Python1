@@ -1,5 +1,3 @@
-Developer,Publisher,IP,Date,Gap,PlayerType,PriceMax,PriceMin,Rawg,Chinese,French,Spanish,Japanese,Korean,Russian,Turkish,Portuguese,Polish,Action,ActionAdventure,Role-Playing,Strategy,Adventure,First-Person,Fighting,Puzzle,Arcade,Sci-Fi,Open-world,Survival,PC,PS4,XBOX,NS,Youtube,Twitch,MCUserScore,MCCriticScore,MCUserRatings,MCMediaRatings,SteamCCU,SteamComments,SteamFollowers,Douban,Google Trends,IsFamous
-6,7,6,43998,65,0,50,50,149,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1445901356,116736478,63694022,0,8268,23242,8.1,86,702,93,6057,2350,58414,154,0.07,1
-6,7,4,44040,23,0,30,30,33,1,1,1,1,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1513870568,118784440,64785560,0,11184,91539,8.7,73,225,84,12423,3085,48624,9,0,1
-6,6,6,44022,41,2,60,60,125,1,1,1,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,1484366150,117906742,64317758,0,27744,48705,7.3,91,209,81,24010,4420,21203,10,9.09,1
-6,10,6,44029,34,0,60,60,38,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,,0,0,0,0,0,0,54148605,34257,40084,6.8,79,1317,103,0,0,0,222,0.26,1
+Developer,Publisher,IP,Date,Gap,PlayerType,PriceMax,PriceMin,Rawg,Chinese,French,Spanish,Japanese,Korean,Russian,Turkish,Portuguese,Polish,Action,ActionAdventure,Role-Playing,Strategy,Adventure,First-Person,Fighting,Puzzle,Arcade,Sci-Fi,Open-world,Survival,PC,PS4,XBOX,NS,Youtube,TwitchPeakView,TwitchPeakChannel,MCUserScore,MCCriticScore,MCUserRatings,MCMediaRatings,SteamCCU,SteamComments,SteamFollowers,Douban,Google Trends,IsFamous
+10,10,10,44092,47,1,60,60,72,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56904540,88004,45152,1571,6.3,82,515,97,0,0,0,112,0.11,1
+6,10,6,44029,75,0,60,60,64,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,54148605,428506,40084,935,6.9,80,1459,114,0,0,0,481,0.24,1
