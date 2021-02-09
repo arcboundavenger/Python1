@@ -53,16 +53,16 @@ for ii in range(0,j):
         y_tests=np.array(y_test)
         print(r2_score(y_tests,y_pred))
 
-        for row in range(0, y_pred_len):
-                data_arr.append([y_tests[row][0], y_pred[row]])
-        np_data = np.array(data_arr)
-        pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
+        # for row in range(0, y_pred_len):
+        #         data_arr.append([y_tests[row][0], y_pred[row]])
+        # np_data = np.array(data_arr)
+        # pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
         # pd_data.to_csv('submit.csv', index=None)
         # fig, ax = plt.subplots(figsize=(12,12))
-        # plot_importance(xgb_model2, importance_type='total_gain', ax=ax, title='Feature Importance (total_gain)', xlabel='Feature Score')
+        # # plot_importance(xgb_model2, importance_type='total_gain', ax=ax, title='Feature Importance (total_gain)', xlabel='Feature Score')
         # plot_importance(xgb_model2, importance_type='gain', ax=ax, title='Feature Importance (gain)', xlabel='Feature Score')
-        # plot_importance(xgb_model2, importance_type='weight', ax=ax, title='Feature Importance (weight)', xlabel='Feature Score')
-        #
+        # # plot_importance(xgb_model2, importance_type='weight', ax=ax, title='Feature Importance (weight)', xlabel='Feature Score')
+
         # plt.show()
         # r2_1 = gs.best_score_
         # r2_2 = r2_score(y_tests,y_pred)
