@@ -30,7 +30,7 @@ dtest2 = pd.read_csv('gametestdata.csv') #这个地方是要预测的游戏的x�
 new_pred = np.zeros((j, 10))  # 代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
 for ii in range(0,j):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=ii)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
 
 
         ##############以下是GridSearch/fit调参过程##################

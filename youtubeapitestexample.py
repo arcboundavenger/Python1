@@ -10,7 +10,7 @@ import googleapiclient.discovery
 import googleapiclient.errors
 
 import xlrd
-data = xlrd.open_workbook(filename="NewGames2.xlsx")
+data = xlrd.open_workbook(filename="NewGames2.xls")
 table = data.sheet_by_name('Sheet1')
 title = table.col_values(0)
 startdate = table.col_values(1)
@@ -26,7 +26,7 @@ def main():
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "client_secret_743607985340-suua71rq92tjm34e2m0lh3cr8o5fac4q.apps.googleusercontent.com.json"
+    client_secrets_file = "client_secret_743607985340-lpvgb4s2gdef8oklrbn5alvv9pim40dq.apps.googleusercontent.com.json"
 
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
