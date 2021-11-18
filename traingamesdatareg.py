@@ -23,14 +23,13 @@ print('type X')
 print(type(X))
 print('type Y')
 print(type(y))
-j=50 #随机多少次，可以改的大一些
-
+j=100 #随机多少次，可以改的大一些
 
 dtest2 = pd.read_csv('gametestdata.csv') #这个地方是要预测的游戏的x值列表
 new_pred = np.zeros((j, 120))  # 代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
 for ii in range(0,j):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=ii)
         ##############以下是GridSearch/fit调参过程##################
 
         n_estimators = [500]
@@ -41,7 +40,7 @@ for ii in range(0,j):
         gs = GridSearchCV(regress_model, param_grid, verbose=1, refit=True, scoring='r2', cv=3, n_jobs=-1)
         gs.fit(X_train, y_train)
         print(ii)
-        print("参数的最佳取值：:", gs.best_params_)
+        # print("参数的最佳取值：", gs.best_params_)
         print("最佳模型得分:", gs.best_score_)
 
         xgb_model2 = gs.best_estimator_
@@ -49,18 +48,18 @@ for ii in range(0,j):
         y_pred_len = len(y_pred)
         data_arr=[]
         y_tests=np.array(y_test)
-        print(r2_score(y_tests,y_pred))
+        print("最佳预测得分:",r2_score(y_tests,y_pred))
 
         # for row in range(0, y_pred_len):
         #         data_arr.append([y_tests[row][0], y_pred[row]])
         # np_data = np.array(data_arr)
         # pd_data = pd.DataFrame(np_data, columns=['y_test', 'y_predict'])
-        # pd_data.to_csv('submit.csv', index=None)
+        # # pd_data.to_csv('submit.csv', index=None)
         # fig, ax = plt.subplots(figsize=(12,12))
         # # plot_importance(xgb_model2, importance_type='total_gain', ax=ax, title='Feature Importance (total_gain)', xlabel='Feature Score')
         # plot_importance(xgb_model2, importance_type='gain', ax=ax, title='Feature Importance (gain)', xlabel='Feature Score')
         # # plot_importance(xgb_model2, importance_type='weight', ax=ax, title='Feature Importance (weight)', xlabel='Feature Score')
-
+        #
         # plt.show()
         # r2_1 = gs.best_score_
         # r2_2 = r2_score(y_tests,y_pred)
@@ -147,7 +146,7 @@ for ii in range(0,j):
         for i in range(0,len(test_pred)):
                 new_pred[ii][i]=math.exp(test_pred[i]) #这里的数字是销量的对数，我在里面用math.exp还原了
         # print(new_pred)
-pd.DataFrame(new_pred).to_csv('PredictResult.csv', index=None)
+pd.DataFrame(new_pred).to_csv('PredictResult1.csv', index=None)
 #
 
 

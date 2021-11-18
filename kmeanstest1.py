@@ -4,17 +4,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import silhouette_score
 
 
 
 
 raw_data=pd.read_excel('1111.xlsx', engine='openpyxl')
 data=raw_data.iloc[:]
-print(type(data))
+
 # 数据归一化
 min_max_scale=MinMaxScaler()
 data=min_max_scale.fit_transform(data)
-#
+
 # distortions = []
 # K = range(1,10)
 # for k in K:
@@ -35,14 +36,12 @@ data=min_max_scale.fit_transform(data)
 ##################################################
 # #调用k-means算法，进行聚类分析
 k = 5 # 定义聚类个数
-kmodel = KMeans(n_clusters=k, init='k-means++', max_iter=300, n_init=10, random_state=8)
-kmodel.fit(data)
-
+kmodel = KMeans(n_clusters=k, init='k-means++', max_iter=500, n_init=15, tol=0.00001, random_state=10).fit(data)
 #查看聚类中心
-print(kmodel.cluster_centers_)
+# print(kmodel.cluster_centers_)
 #查看各样本对应的类别
-print(kmodel.labels_ )
-
+# print(kmodel.labels_ )
+print(kmodel.inertia_)
 
 #####################
 # 绘制雷达图
@@ -75,10 +74,12 @@ for i in range(len(plot_data)):
 
 # ax.set_rgrids(np.arange(0.01, 3.5, 0.5), np.arange(-1, 2.5, 0.5), fontproperties="SimHei") # 手动配置r网格刻度
 ax.set_thetagrids(angles * 180/np.pi, labels)
+# ax.set_ylim([0, 1])
 plt.legend(loc = 4) # 设置图例位置
 leg = ax.legend(fontsize = 'large')
 leg.set_title('Group', prop = {'size':'x-large'})
 plt.xticks(fontsize = 16)
+
 plt.show()
 
 #################################
