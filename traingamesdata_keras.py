@@ -127,6 +127,6 @@ print(history_dict.keys())
 #               metrics=['accuracy'])
 # network.fit(x_train, y_train, epochs=4, batch_size=512)
 #
-# print("test data evaluate, epochs=20", model.evaluate(x_test, y_test))
+# print("test data evaluate, epochs=20", m.evaluate(x_test, y_test))
 # print("test data evaluate, epochs=4 ", network.evaluate(x_test, y_test))
 

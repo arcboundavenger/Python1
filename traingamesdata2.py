@@ -89,8 +89,8 @@ for j in range(3,4,1):
 #     # estimator = PCA(n_components=50)   # 使用PCA将原64维度图像压缩为20个维度
 #     # pca_X_train = estimator.fit_transform(X_train)   # 利用训练特征决定20个正交维度的方向，并转化原训练特征
 #     # pca_X_test = estimator.transform(X_test)
-#     # model = xgb.XGBRegressor(**other_params)
-#     # optimized_GBM = GridSearchCV(estimator=model, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=-1)
+#     # m = xgb.XGBRegressor(**other_params)
+#     # optimized_GBM = GridSearchCV(estimator=m, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=-1)
 #     optimized_GBM.fit(X_train, y_train)
 #     evalute_result = optimized_GBM.cv_results_
 #
@@ -190,31 +190,31 @@ plt.show()
 #
 # dtrain = xgb.DMatrix(X_train, y_train)
 # num_rounds = 500
-# model = xgb.train(plst, dtrain, num_rounds)
+# m = xgb.train(plst, dtrain, num_rounds)
 #
 #
 #
 # dtest = xgb.DMatrix(X_test)
-# ans = model.predict(dtest)
+# ans = m.predict(dtest)
 # # print('ans:')
 # # print(ans)
 #
 #
-# preds = model.predict(dtest)
+# preds = m.predict(dtest)
 # best_preds = np.asarray([np.argmax(line) for line in preds])
 # print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
 # print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
 # print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
 #
-# model.feature_names = feature_name_list
+# m.feature_names = feature_name_list
 #
-# plot_importance(model, importance_type='weight')
+# plot_importance(m, importance_type='weight')
 # plt.show()
 #
-# model.save_model('0001.model')
-# model.dump_model('dump.raw.txt')
+# m.save_model('0001.m')
+# m.dump_model('dump.raw.txt')
 # dtest.save_binary('dtest.buffer')
-# bst2 = xgb.Booster(model_file='0001.model')
+# bst2 = xgb.Booster(model_file='0001.m')
 #
 # #################以下是预测过程#############
 #
@@ -227,12 +227,12 @@ plt.show()
 # test_pred = optimized_GBM.predict(dtest2)
 # print (test_pred)
 
-# # save model to file
+# # save m to file
 # pickle.dump(xgb_model2, open("xgb1", "wb"))
 #
 # # some time later...
 #
-# # load model from file
+# # load m from file
 # loaded_model = pickle.load(open("xgb1", "rb"))
 #
 # # make predictions for test data

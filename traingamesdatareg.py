@@ -29,7 +29,7 @@ dtest2 = pd.read_csv('gametestdata.csv') #这个地方是要预测的游戏的x�
 new_pred = np.zeros((j, 120))  # 代表想要预测游戏的个数，随情况调整，我忘了先读表了，所以都是手动改的
 
 for ii in range(0,j):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=ii)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=ii)
         ##############以下是GridSearch/fit调参过程##################
 
         n_estimators = [500]
@@ -109,31 +109,31 @@ for ii in range(0,j):
         #
         # dtrain = xgb.DMatrix(X_train, y_train)
         # num_rounds = 500
-        # model = xgb.train(plst, dtrain, num_rounds)
+        # m = xgb.train(plst, dtrain, num_rounds)
         #
         #
         #
         # dtest = xgb.DMatrix(X_test)
-        # ans = model.predict(dtest)
+        # ans = m.predict(dtest)
         # # print('ans:')
         # # print(ans)
         #
         #
-        # preds = model.predict(dtest)
+        # preds = m.predict(dtest)
         # best_preds = np.asarray([np.argmax(line) for line in preds])
         # print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
         # print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
         # print("Accuracy = {}".format(accuracy_score(y_test, best_preds)))
         #
-        # model.feature_names = feature_name_list
+        # m.feature_names = feature_name_list
         #
-        # plot_importance(model, importance_type='weight')
+        # plot_importance(m, importance_type='weight')
         # plt.show()
         #
-        # model.save_model('0001.model')
-        # model.dump_model('dump.raw.txt')
+        # m.save_model('0001.m')
+        # m.dump_model('dump.raw.txt')
         # dtest.save_binary('dtest.buffer')
-        # bst2 = xgb.Booster(model_file='0001.model')
+        # bst2 = xgb.Booster(model_file='0001.m')
         #
         #################以下是预测过程#############
 

@@ -21,6 +21,5 @@ for nu in need_update:
     subprocess.call(com_update)
     print("----------{com} 执行结束-----------\n".format(com=com_update))
 
-
 print("检查更新情况:")
 subprocess.call(com_list_o)

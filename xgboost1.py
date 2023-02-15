@@ -145,7 +145,7 @@ plt.show()
 #                     scoring="neg_log_loss",
 #                     cv=3)
 # grid.fit(X_train, y_train)
-# model.dump_model('dump.raw.txt')
+# m.dump_model('dump.raw.txt')
 
 
 

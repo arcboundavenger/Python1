@@ -98,12 +98,12 @@ print(X_train, y_train)
 #
 # num_rounds = 500
 # #这里直接使用 params取代 plst也可以
-# model = xgb.train(plst, dtrain, num_rounds)
+# m = xgb.train(plst, dtrain, num_rounds)
 #
 #
 #
 # dtest = xgb.DMatrix(X_test)
-# ans = model.predict(dtest)
+# ans = m.predict(dtest)
 # print('ans:')
 # print(ans)
 #
@@ -122,10 +122,10 @@ print(X_train, y_train)
 # #
 #
 # # 显示重要特征
-# plot_importance(model)
+# plot_importance(m)
 # # plt.show()
 #
-# preds = model.predict(dtest)
+# preds = m.predict(dtest)
 # best_preds = np.asarray([np.argmax(line) for line in preds])
 # print("Precision = {}".format(precision_score(y_test, best_preds, average='macro')))
 # print("Recall = {}".format(recall_score(y_test, best_preds, average='macro')))
@@ -145,7 +145,7 @@ print(X_train, y_train)
 # #                     scoring="neg_log_loss",
 # #                     cv=3)
 # # grid.fit(X_train, y_train)
-# # model.dump_model('dump.raw.txt')
+# # m.dump_model('dump.raw.txt')
 #
 #
 
@@ -192,8 +192,8 @@ optimized_GBM = GridSearchCV(
 
 #
 #
-# model = xgb.XGBRegressor(**other_params)
-# optimized_GBM = GridSearchCV(estimator=model, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=4)
+# m = xgb.XGBRegressor(**other_params)
+# optimized_GBM = GridSearchCV(estimator=m, param_grid=cv_params, scoring='r2', cv=5, verbose=1, n_jobs=4)
 optimized_GBM.fit(X_train, y_train)
 evalute_result = optimized_GBM.cv_results_
 print('每轮迭代运行结果:{0}'.format(evalute_result))
