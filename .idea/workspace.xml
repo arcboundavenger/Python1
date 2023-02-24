@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2021.11">
-      <change beforePath="$PROJECT_DIR$/GamesalesdataV3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GamesalesdataV3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GamessalesTargetV2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GamessalesTargetV2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PredictResult1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PredictResult1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gametestdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gametestdata.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onehotcsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/onehotcsv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traingamesdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/traingamesdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traingamesdata2.py" beforeDir="false" afterPath="$PROJECT_DIR$/traingamesdata2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traingamesdata_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/traingamesdata_keras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traingamesdatareg.py" beforeDir="false" afterPath="$PROJECT_DIR$/traingamesdatareg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updateallpackages.py" beforeDir="false" afterPath="$PROJECT_DIR$/updateallpackages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wikifecttest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/wikifecttest1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xgboost1.py" beforeDir="false" afterPath="$PROJECT_DIR$/xgboost1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xgboost2.py" beforeDir="false" afterPath="$PROJECT_DIR$/xgboost2.py" afterDir="false" />
+    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecast111.csv" beforeDir="false" afterPath="$PROJECT_DIR$/forecast111.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prophettest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/prophettest1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1deadspace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1deadspace.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1securitybreach.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1securitybreach.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +24,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637218298906</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2023.2">
+      <created>1676447599784</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676447599784</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2021.9.13" />
     <MESSAGE value="2021.11" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021.11" />
+    <MESSAGE value="2023.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.2" />
   </component>
 </project>
