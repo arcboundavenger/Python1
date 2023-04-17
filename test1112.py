@@ -22,8 +22,8 @@ m.match(caliper = None, replace = False)
 m.evaluate()
 
 # 一些数据
-a = m.df # 打上PROPENSITY 潜力分
-m.df['CASE'].value_counts()
+a = m.df2 # 打上PROPENSITY 潜力分
+m.df2['CASE'].value_counts()
 
 b = m.matched_data   # 匹配之后的数据对
 m.matched_data['CASE'].value_counts()

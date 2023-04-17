@@ -13,12 +13,12 @@ df = pd.DataFrame(KNN(k=6).fit_transform(data), dtype=int)
 df.to_csv("Playwithempty_KNN.csv",index=False,sep=',')
 
 # imputer = KNNImputer(n_neighbors=6)
-# df =  pd.DataFrame(imputer.fit_transform(data), dtype=int)
-# df.to_csv("Playwithempty_KNN_2.csv",index=False,sep=',')
+# df2 =  pd.DataFrame(imputer.fit_transform(data), dtype=int)
+# df2.to_csv("Playwithempty_KNN_2.csv",index=False,sep=',')
 
 
-# df = pd.DataFrame(IterativeImputer(max_iter=10, random_state=0).fit_transform(data), dtype=int)
-# df.to_csv("Playwithempty_MICE.csv",index=False,sep=',')
+# df2 = pd.DataFrame(IterativeImputer(max_iter=10, random_state=0).fit_transform(data), dtype=int)
+# df2.to_csv("Playwithempty_MICE.csv",index=False,sep=',')
 
-# df = pd.DataFrame(data.interpolate(method = 'linear'), dtype=int)
-# df.to_csv("Playwithempty_Interpolation.csv",index=False,sep=',')
+# df2 = pd.DataFrame(data.interpolate(method = 'linear'), dtype=int)
+# df2.to_csv("Playwithempty_Interpolation.csv",index=False,sep=',')

@@ -8,17 +8,33 @@ import datetime as dt
 import itertools
 from prophet.diagnostics import cross_validation
 from prophet.diagnostics import performance_metrics
+from prophet.plot import add_changepoints_to_plot
+import jenkspy
 
-df = pd.read_csv('test1securitybreach.csv')  # read data
-# df['y'] = (df['y'] - df['y'].min()) / (df['y'].max() - df['y'].min())
+df2 = pd.read_csv('test1ff7core.csv')
+df = df2  # read data
+
+df2['ds'] = pd.to_datetime(df2['ds'])
+df2.set_index(df2['ds'], inplace = True)
+ts = df2['y']
+y = np.array(ts.tolist())
+n_breaks = int(input('Enter the number of changepoints:'))
+breaks = jenkspy.jenks_breaks(y, n_breaks-1)
+breaks_jkp = []
+breaks_jkp_str = []
+for v in breaks:
+    idx = ts.index[ts == v]
+    breaks_jkp.append(idx)
+    breaks_jkp_str.append(idx.strftime('%Y-%m-%d')[0]) #Auto-detect changepoints
+
+# df2['y'] = (df2['y'] - df2['y'].min()) / (df2['y'].max() - df2['y'].min())
 df['floor'] = 1
-df['cap'] = 47163
+df['cap'] = max(df.y) * 1.2
 
-est_impact = int(input('Enter the No. of impact (1. Low; 2. Mid; 3. High; 4. Ultra High):'))
+est_impact = int(input('Enter the No. of impact (1. Super Low; 2. Low; 3. Mid; 4. High; 5. Super High):'))
 
 # create m and fit data
-# promotion = df['promotion']
-# data_with_regressors = add_regressor(df, promotion, varname='promotion')
+# promotion = df2['promotion']
 
 announcement_date = input('Enter the announcement date (YYYYMMDD):')
 
@@ -26,7 +42,7 @@ announcement = pd.DataFrame({
     'holiday': 'announcement',
     'ds': pd.to_datetime([announcement_date]),
     'lower_window': -1 * est_impact,
-    'upper_window': est_impact * 4, 'holidays_prior_scale': 5,
+    'upper_window': est_impact * 4, 'holidays_prior_scale': df.y.iloc[0] / max(df.y) * 10,
 })
 
 # expo = pd.DataFrame({
@@ -59,12 +75,9 @@ holidays = pd.concat((announcement,
                       ))
 
 param_grid = {
-    'growth': ['logistic'],
-    'seasonality_prior_scale': [0.01,0.1,1],
-    'interval_width': [0.8],
-    'seasonality_mode': ['additive'],
-    'changepoint_range': [i / 10 for i in range(3, 10, 1)],
-    'changepoint_prior_scale': [0.01,0.05,0.1]
+    'seasonality_prior_scale': [0.01, 0.1],
+    'changepoint_range': [i / 10 for i in range(7, 10, 1)],
+    'changepoint_prior_scale': [0.05, 0.1, 0.5, 1]
 }
 
 # Generate all combinations of parameters
@@ -98,14 +111,16 @@ print(best_params)
 
 m = Prophet(
     daily_seasonality=False,
-    growth=best_params['growth'],
+    growth='linear',
     holidays=holidays,
     weekly_seasonality=True,
+    yearly_seasonality=False,
     seasonality_prior_scale=best_params['seasonality_prior_scale'],
-    seasonality_mode=best_params['seasonality_mode'],
-    interval_width=best_params['interval_width'],
+    seasonality_mode='additive',
+    interval_width=0.8,
     changepoint_prior_scale=best_params['changepoint_prior_scale'],
-    changepoint_range=best_params['changepoint_range']
+    changepoint_range=best_params['changepoint_range'],
+    changepoints=breaks_jkp_str
 )
 
 # m = Prophet(
@@ -120,16 +135,16 @@ m = Prophet(
 #     changepoint_prior_scale=0.1
 # )
 
-# m.add_regressor('promotion', prior_scale= 0.01)
+# m.add_regressor('promotion', prior_scale=best_params['changepoint_prior_scale'])
 m.fit(df)
 
-future = m.make_future_dataframe(periods=90)
+future = m.make_future_dataframe(periods=30)
 
-# df_temp=pd.read_csv('promotiontest1.csv')
+# df_temp = pd.read_csv('promotiontest1ff7core.csv')
 # future['promotion'] = df_temp['promotion']
 future = future.fillna(0)
 future['floor'] = 1
-future['cap'] = 47163
+future['cap'] = max(df.y) * 1.2
 
 forecast = m.predict(future)
 
@@ -138,21 +153,13 @@ from prophet.plot import plot_cross_validation_metric
 # fig = plot_cross_validation_metric(df_cv, metric='mape', rolling_window=0.1)
 # fig.show()
 
-# fig = px.line(df, x="ds", y="y")
-# fig.show()
 fig1 = m.plot(forecast)
-# fig2 = m.plot_components(forecast)
+a = add_changepoints_to_plot(fig1.gca(), m, forecast)
 
 # plt.axvline(dt.datetime(2022, 8, 28), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 9, 7), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 9, 30), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 10, 10), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 10, 24), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 11, 2), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 11, 21), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 11, 30), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2022, 12, 21), ls='--', lw=1, c='red')
-# plt.axvline(dt.datetime(2023, 1, 6), ls='--', lw=1, c='red')
-plt.ylim(-50, max(df.y) * 1.1)
+
+plt.ylim(-50, max(df.y) * 1.2)
 plt.show()
+# fig = m.plot_components(forecast)
+# fig.show()
 forecast.to_csv('forecast111.csv')
