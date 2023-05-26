@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.2.24">
-      <change beforePath="$PROJECT_DIR$/.idea/Python1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GamesalesdataV3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GamesalesdataV3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GamessalesTargetV2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GamessalesTargetV2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecast111.csv" beforeDir="false" afterPath="$PROJECT_DIR$/forecast111.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playwithempty.py" beforeDir="false" afterPath="$PROJECT_DIR$/playwithempty.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/promotiontest1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/promotiontest1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prophettest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/prophettest1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1112.py" beforeDir="false" afterPath="$PROJECT_DIR$/test1112.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1deadspace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1deadspace.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1ff7core.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1ff7core.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1securitybreach.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1securitybreach.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677232230376</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2023.4">
+      <created>1681718344920</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681718344920</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +264,7 @@
     <MESSAGE value="2021.11" />
     <MESSAGE value="2023.2" />
     <MESSAGE value="2023.2.24" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.2.24" />
+    <MESSAGE value="2023.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.4" />
   </component>
 </project>

@@ -76,8 +76,8 @@ holidays = pd.concat((announcement,
 
 param_grid = {
     'seasonality_prior_scale': [0.01, 0.1],
-    'changepoint_range': [i / 10 for i in range(7, 10, 1)],
-    'changepoint_prior_scale': [0.05, 0.1, 0.5, 1]
+    'changepoint_range': [i / 10 for i in range(8, 10, 1)],
+    'changepoint_prior_scale': [0.05, 0.1, 0.5]
 }
 
 # Generate all combinations of parameters
