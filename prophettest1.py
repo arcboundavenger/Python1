@@ -11,15 +11,15 @@ from prophet.diagnostics import performance_metrics
 from prophet.plot import add_changepoints_to_plot
 import jenkspy
 
-df2 = pd.read_csv('test1ff7core.csv')
-df = df2  # read data
+df2 = pd.read_csv('test1securitybreach.csv')
+df = df2
+df3 = pd.read_csv('test2securitybreach.csv')
 
 df2['ds'] = pd.to_datetime(df2['ds'])
 df2.set_index(df2['ds'], inplace = True)
 ts = df2['y']
 y = np.array(ts.tolist())
-n_breaks = int(input('Enter the number of changepoints:'))
-breaks = jenkspy.jenks_breaks(y, n_breaks-1)
+breaks = jenkspy.jenks_breaks(y, 24)
 breaks_jkp = []
 breaks_jkp_str = []
 for v in breaks:
@@ -36,11 +36,9 @@ est_impact = int(input('Enter the No. of impact (1. Super Low; 2. Low; 3. Mid; 4
 # create m and fit data
 # promotion = df2['promotion']
 
-announcement_date = input('Enter the announcement date (YYYYMMDD):')
-
 announcement = pd.DataFrame({
     'holiday': 'announcement',
-    'ds': pd.to_datetime([announcement_date]),
+    'ds': pd.to_datetime([input('Enter the announcement date (YYYYMMDD):')]),
     'lower_window': -1 * est_impact,
     'upper_window': est_impact * 4, 'holidays_prior_scale': df.y.iloc[0] / max(df.y) * 10,
 })
@@ -59,11 +57,9 @@ announcement = pd.DataFrame({
 #     'upper_window': 30, 'holidays_prior_scale': 10,
 # })
 
-release_date = input('Enter the release date (YYYYMMDD):')
-
 release = pd.DataFrame({
     'holiday': 'release',
-    'ds': pd.to_datetime([release_date]),
+    'ds': pd.to_datetime([input('Enter the release date (YYYYMMDD):')]),
     'lower_window': -5 * est_impact,
     'upper_window': est_impact * 5 * 3, 'holidays_prior_scale': 10,
 })
@@ -75,9 +71,9 @@ holidays = pd.concat((announcement,
                       ))
 
 param_grid = {
-    'seasonality_prior_scale': [0.01, 0.1],
+    'seasonality_prior_scale': [0.01, 0.02, 0.05, 0.1],
     'changepoint_range': [i / 10 for i in range(8, 10, 1)],
-    'changepoint_prior_scale': [0.05, 0.1, 0.5]
+    'changepoint_prior_scale': [0.01, 0.05, 0.1, 0.2, 0.5]
 }
 
 # Generate all combinations of parameters
@@ -156,7 +152,7 @@ from prophet.plot import plot_cross_validation_metric
 fig1 = m.plot(forecast)
 a = add_changepoints_to_plot(fig1.gca(), m, forecast)
 
-# plt.axvline(dt.datetime(2022, 8, 28), ls='--', lw=1, c='red')
+plt.plot(pd.to_datetime(df3['ds']), df3['y'], 'g+')
 
 plt.ylim(-50, max(df.y) * 1.2)
 plt.show()

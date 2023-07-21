@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.4">
+    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameList.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/GameList.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleTrendsDataTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleTrendsDataTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleTrendsTest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleTrendsTest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecast111.csv" beforeDir="false" afterPath="$PROJECT_DIR$/forecast111.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onehotcsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/onehotcsv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prophettest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/prophettest1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test1ff7core.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1ff7core.csv" afterDir="false" />
     </list>
@@ -57,8 +61,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.prophettest1">
-    <configuration name="findpeakstest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.onehotcsv">
+    <configuration name="GoogleTrendsDataTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,7 +74,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/findpeakstest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoogleTrendsDataTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -79,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="helloworld" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="onehotcsv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,7 +95,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helloworld.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/onehotcsv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -100,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="jenkspytest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="rawgapitest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,7 +116,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jenkspytest1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rawgapitest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -121,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="prophettest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamapifulllist" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,7 +137,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prophettest1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamapifulllist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,19 +146,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="updateallpackages" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamapitest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Administrator\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/updateallpackages.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamapitest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,19 +168,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.jenkspytest1" />
-      <item itemvalue="Python.helloworld" />
-      <item itemvalue="Python.findpeakstest" />
-      <item itemvalue="Python.prophettest1" />
-      <item itemvalue="Python.updateallpackages" />
+      <item itemvalue="Python.onehotcsv" />
+      <item itemvalue="Python.steamapitest" />
+      <item itemvalue="Python.GoogleTrendsDataTest" />
+      <item itemvalue="Python.rawgapitest" />
+      <item itemvalue="Python.steamapifulllist" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.prophettest1" />
-        <item itemvalue="Python.jenkspytest1" />
-        <item itemvalue="Python.updateallpackages" />
-        <item itemvalue="Python.findpeakstest" />
-        <item itemvalue="Python.helloworld" />
+        <item itemvalue="Python.onehotcsv" />
+        <item itemvalue="Python.steamapitest" />
+        <item itemvalue="Python.steamapifulllist" />
+        <item itemvalue="Python.rawgapitest" />
+        <item itemvalue="Python.GoogleTrendsDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681718344920</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2023.5">
+      <created>1685085123650</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685085123650</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +276,7 @@
     <MESSAGE value="2023.2" />
     <MESSAGE value="2023.2.24" />
     <MESSAGE value="2023.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.4" />
+    <MESSAGE value="2023.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.5" />
   </component>
 </project>
