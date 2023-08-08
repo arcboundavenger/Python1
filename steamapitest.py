@@ -13,6 +13,7 @@ for i in range(len(appid_list)):
     # Define the URL of the API
     url = "https://store.steampowered.com/api/appdetails"
     url2 = 'https://steamspy.com/api.php?request=appdetails'
+    
 
     # Define the query parameters
     params = {
