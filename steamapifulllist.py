@@ -1,6 +1,7 @@
 import requests
 import json
 import csv
+import pandas as pd
 
 # Define the URL of the API
 url = "https://api.steampowered.com/ISteamApps/GetAppList/v2/"
@@ -18,6 +19,10 @@ if response.status_code == 200:
     with open("data.json", "w") as f:
         # Write the JSON string to the txt file
         f.write(json_data)
+    # 将JSON数据转换为DataFrame对象
+    df = pd.DataFrame(data['applist']['apps'])
+    # 将DataFrame对象保存为CSV文件
+    df.to_csv('steam_app_list.csv', index=False)
 
 else:
     # Print an error message if the request failed

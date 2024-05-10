@@ -4,7 +4,7 @@ import time
 import csv
 import pandas as pd
 
-df = pd.read_csv('GameList 2.csv')
+df = pd.read_csv('GameList 2.csv', encoding='latin-1')
 appid_list = df['appid']
 list_temp = []
 for i in range(len(appid_list)):
@@ -25,13 +25,16 @@ for i in range(len(appid_list)):
             data = json.load(f)
 
         # 获取所有价格的值
-        prices = [record['price'] for record in data['history']]
-        players = [record['players'] for record in data['history']]
+        tags = data['tags']
+        name = data['name']
         # 获取最小值
-        min_price = min(prices)
-        max_players = int(max(players))
-        dict_temp = {'appid': str(appid_list[i]), 'price_min': min_price, 'max_players': max_players}
+        dict_temp = {'appid': str(appid_list[i]),'name': name, 'tags': tags}
         list_temp.append(dict_temp)
+        with open('GameList_2_new_gama.csv', 'w', newline='', encoding='utf-8') as file:
+            writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())
+            writer.writeheader()
+            writer.writerows(list_temp)
+        print("Request succeed")
     else:
         # Print an error message if the request failed
         print(f"Request failed with status code {response.status_code}")
@@ -39,7 +42,3 @@ for i in range(len(appid_list)):
 
 print(list_temp)
 
-with open('GameList_2_gama.csv', 'w', newline='') as file:
-    writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())
-    writer.writeheader()
-    writer.writerows(list_temp)

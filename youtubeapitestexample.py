@@ -1,43 +1,58 @@
-# -*- coding: utf-8 -*-
+from google.oauth2.credentials import Credentials
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+from datetime import datetime, timedelta
+import pandas as pd
+from google_auth_oauthlib.flow import InstalledAppFlow
+import time
+import csv
 
-# Sample Python code for youtube.search.list
-# See instructions for running these code samples locally:
-# https://developers.google.com/explorer-help/guides/code_samples#python
+# 加载客户端凭据
+flow = InstalledAppFlow.from_client_secrets_file('client_secret_438963477050-h5o5n7ho4nifiglijmini53ee1rs4ecu.apps.googleusercontent.com.json', scopes=['https://www.googleapis.com/auth/youtube.force-ssl'])
+credentials = flow.run_local_server(port=0)
 
-import os
-import google_auth_oauthlib.flow
-import googleapiclient.discovery
-import googleapiclient.errors
+# 构建YouTube Data API客户端
+youtube = build('youtube', 'v3', credentials=credentials)
 
-import xlrd
-data = xlrd.open_workbook(filename="NewGames2.xls")
-table = data.sheet_by_name('Sheet1')
-title = table.col_values(0)
-startdate = table.col_values(1)
-enddate = table.col_values(2)
+# 读取Excel表
+df = pd.read_excel('NewGames2.xlsx')
 
+# 定义要查询的日期范围
+start_date = 'YYYY-MM-DD'
+end_date = 'YYYY-MM-DD'
 
-scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
+# 初始化视频总数
+total_video_count = 0
+list_temp = []
 
-def main():
-    # Disable OAuthlib's HTTPS verification when running locally.
-    # *DO NOT* leave this option enabled in production.
-    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+# 遍历Excel表中的每一行
+for index, row in df.iterrows():
+    game_name = row['Game']
+    start_date = row['Start'].strftime('%Y-%m-%d')
+    end_date = row['End'].strftime('%Y-%m-%d')
 
-    api_service_name = "youtube"
-    api_version = "v3"
-    client_secrets_file = "client_secret_743607985340-lpvgb4s2gdef8oklrbn5alvv9pim40dq.apps.googleusercontent.com.json"
+    # 构建查询参数
+    search_params = {
+        'q': game_name,
+        'publishedAfter': str(start_date) + 'T00:00:00Z',
+        'publishedBefore': str(end_date) + 'T00:00:00Z',
+        'type': 'video',
+        'videoCategoryId': 20,
+        'part': 'snippet'
+    }
 
-    # Get credentials and create an API client
-    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
-        client_secrets_file, scopes)
-    credentials = flow.run_console()
-    youtube = googleapiclient.discovery.build(
-        api_service_name, api_version, credentials=credentials)
-    for i in range(0,len(title)):
-        request = youtube.search().list(part="snippet",publishedAfter=startdate[i],publishedBefore=enddate[i],q=title[i],type="video",videoCategoryId="20")
-        response = request.execute()
-        print(response['pageInfo'])
+    # 发起搜索请求
+    search_response = youtube.search().list(**search_params).execute()
 
-if __name__ == "__main__":
-    main()
+    # 获取搜索结果中的视频数量
+    video_count = search_response['pageInfo']['totalResults']
+    time.sleep(1)
+    dict_temp = {'game': game_name, 'video_count': video_count}
+    list_temp.append(dict_temp)
+
+print(list_temp)
+
+with open('GameList_2_youtube.csv', 'w', newline='') as file:
+    writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())
+    writer.writeheader()
+    writer.writerows(list_temp)
