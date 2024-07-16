@@ -9,7 +9,7 @@ point_of_view_list = ['Isometric', 'Top-Down', 'Third Person', 'First-Person']
 
 
 # 读取原始xlsx文件
-df = pd.read_excel('Upcoming Steam Games.xlsx')
+df = pd.read_excel('steam_games_continued_202407_temp.xlsx')
 
 # 创建新的DataFrame来存储结果
 new_df = pd.DataFrame(columns=['appid', 'Main Genre', 'Sub-Genre', 'Niche Genre', 'Art Style', 'Theme', 'Game Mode', 'POV'])
@@ -39,5 +39,5 @@ for index, row in df.iterrows():
         new_df = pd.concat([new_df, pd.DataFrame(categories, index=[0])], ignore_index=True)
 
 # 将结果保存到新的xlsx文件
-new_df.to_excel('output_Upcoming Steam Games.xlsx', index=False)
+new_df.to_excel('output_steam_games_continued_202407_temp.xlsx', index=False)
 print('Done')
