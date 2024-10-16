@@ -1,0 +1,280 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bc68ae17-78db-4fa7-ae61-50baa3711122\" name=\"Default Changelist\" comment=\"2023.8\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GameList 2.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GameList 2.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GameList.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GameList.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GoogleTrendsTest.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GoogleTrendsTest.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/NewGames2.xlsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/NewGames2.xlsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/data.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/data.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/onehotcsv.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/onehotcsv.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/steamapifulllist.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/steamapifulllist.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/steamapitest2.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/steamapitest2.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/youtubeapitestexample.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/youtubeapitestexample.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"arcboundavenger\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/arcboundavenger/Python1.git\",\r\n    \"accountId\": \"014e99f4-c146-4252-8e04-aa2f6e69a15c\"\r\n  }\r\n}]]></component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"1wWlhLr0i0FQF0vTOfifMdWNFdp\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Python.steamsubgenrekmeans\">\r\n    <configuration name=\"prophettest1\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/prophettest1.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"steamsubgenrekmeans\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/steamsubgenrekmeans.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"step1deleteextratags\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/step1deleteextratags.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"step2createheatmap\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/step2createheatmap.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"usingpandstohandlesteamdata2\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Python1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/usingpandstohandlesteamdata2.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Python.prophettest1\" />\r\n      <item itemvalue=\"Python.usingpandstohandlesteamdata2\" />\r\n      <item itemvalue=\"Python.steamsubgenrekmeans\" />\r\n      <item itemvalue=\"Python.step1deleteextratags\" />\r\n      <item itemvalue=\"Python.step2createheatmap\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.steamsubgenrekmeans\" />\r\n        <item itemvalue=\"Python.prophettest1\" />\r\n        <item itemvalue=\"Python.usingpandstohandlesteamdata2\" />\r\n        <item itemvalue=\"Python.step2createheatmap\" />\r\n        <item itemvalue=\"Python.step1deleteextratags\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bc68ae17-78db-4fa7-ae61-50baa3711122\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1628582343085</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1628582343085</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"2021.9.13\">\r\n      <created>1631525345157</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1631525345157</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"2021.9.13\">\r\n      <created>1631529608097</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1631529608097</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"2021.11\">\r\n      <created>1637217465333</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637217465333</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"2021.11\">\r\n      <created>1637217490973</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637217490973</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"2021.11\">\r\n      <created>1637218298906</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637218298906</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"2023.2\">\r\n      <created>1676447599784</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676447599784</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"2023.2.24\">\r\n      <created>1677232230376</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677232230376</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"2023.4\">\r\n      <created>1681718344920</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681718344920</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"2023.5\">\r\n      <created>1685085123650</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685085123650</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"2023.7\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1689923636764</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1689923636764</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"2023.8\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1691488881821</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1691488881821</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"12\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"true\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"2021.9.13\" />\r\n    <MESSAGE value=\"2021.11\" />\r\n    <MESSAGE value=\"2023.2\" />\r\n    <MESSAGE value=\"2023.2.24\" />\r\n    <MESSAGE value=\"2023.4\" />\r\n    <MESSAGE value=\"2023.5\" />\r\n    <MESSAGE value=\"2023.7\" />\r\n    <MESSAGE value=\"2023.8\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"2023.8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2a50b6531ea9422e8ed34261ec4cd9a628b48e09)
++++ b/.idea/workspace.xml	(date 1729109251527)
+@@ -4,18 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.8">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2024.7">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GameList 2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList 2.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GameList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GoogleTrendsTest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleTrendsTest.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/NewGames2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/NewGames2.xlsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/onehotcsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/onehotcsv.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/steamapifulllist.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapifulllist.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Steam_all_premium_games_detailed_edited.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Steam_all_premium_games_detailed_edited.xlsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/kmeansforsteamdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/kmeansforsteamdata.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/steamapitest2.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapitest2.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/youtubeapitestexample.py" beforeDir="false" afterPath="$PROJECT_DIR$/youtubeapitestexample.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -36,15 +29,20 @@
+         <option name="argument" value="--tags" />
+         <option name="title" value="All" />
+       </GitPushTagMode>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "arcboundavenger"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;arcboundavenger&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GitSEFilterConfiguration">
+     <file-type-list>
+       <filtered-out-file-type name="LOCAL_BRANCH" />
+@@ -53,12 +51,12 @@
+       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+     </file-type-list>
+   </component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/arcboundavenger/Python1.git",
+-    "accountId": "014e99f4-c146-4252-8e04-aa2f6e69a15c"
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/arcboundavenger/Python1.git&quot;,
++    &quot;accountId&quot;: &quot;c7d4354f-1622-4559-a977-a83dc02b0224&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -75,13 +73,18 @@
+   </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
++    &quot;Python.kmeansforsteamdata.executor&quot;: &quot;Run&quot;,
++    &quot;Python.positiverateandmultiplier.executor&quot;: &quot;Run&quot;,
++    &quot;Python.steamapifulllist.executor&quot;: &quot;Run&quot;,
++    &quot;Python.steamapitest2.executor&quot;: &quot;Run&quot;,
++    &quot;Python.useanotherpctotest.executor&quot;: &quot;Run&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+     &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
++    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
+   }
+ }</component>
+-  <component name="RunManager" selected="Python.steamsubgenrekmeans">
+-    <configuration name="prophettest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Python.kmeansforsteamdata">
++    <configuration name="kmeansforsteamdata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -94,7 +97,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prophettest1.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kmeansforsteamdata.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -103,7 +106,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="steamsubgenrekmeans" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="positiverateandmultiplier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -116,7 +119,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamsubgenrekmeans.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/positiverateandmultiplier.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -125,7 +128,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="step1deleteextratags" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="steamapifulllist" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -138,7 +141,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step1deleteextratags.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamapifulllist.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -147,7 +150,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="step2createheatmap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="steamapitest2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -160,7 +163,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step2createheatmap.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamapitest2.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -169,7 +172,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="usingpandstohandlesteamdata2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="useanotherpctotest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="Python1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -182,7 +185,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/usingpandstohandlesteamdata2.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/useanotherpctotest.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -192,26 +195,26 @@
+       <method v="2" />
+     </configuration>
+     <list>
+-      <item itemvalue="Python.prophettest1" />
+-      <item itemvalue="Python.usingpandstohandlesteamdata2" />
+-      <item itemvalue="Python.steamsubgenrekmeans" />
+-      <item itemvalue="Python.step1deleteextratags" />
+-      <item itemvalue="Python.step2createheatmap" />
++      <item itemvalue="Python.kmeansforsteamdata" />
++      <item itemvalue="Python.useanotherpctotest" />
++      <item itemvalue="Python.steamapitest2" />
++      <item itemvalue="Python.steamapifulllist" />
++      <item itemvalue="Python.positiverateandmultiplier" />
+     </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Python.steamsubgenrekmeans" />
+-        <item itemvalue="Python.prophettest1" />
+-        <item itemvalue="Python.usingpandstohandlesteamdata2" />
+-        <item itemvalue="Python.step2createheatmap" />
+-        <item itemvalue="Python.step1deleteextratags" />
++        <item itemvalue="Python.kmeansforsteamdata" />
++        <item itemvalue="Python.useanotherpctotest" />
++        <item itemvalue="Python.steamapitest2" />
++        <item itemvalue="Python.steamapifulllist" />
++        <item itemvalue="Python.positiverateandmultiplier" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
++        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -303,7 +306,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1691488881821</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="2024.7">
++      <option name="closed" value="true" />
++      <created>1721081301964</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1721081301964</updated>
++    </task>
++    <task id="LOCAL-00013" summary="2024.7">
++      <option name="closed" value="true" />
++      <created>1721162197918</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1721162197918</updated>
++    </task>
++    <option name="localTasksCounter" value="14" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -332,6 +351,7 @@
+     <MESSAGE value="2023.5" />
+     <MESSAGE value="2023.7" />
+     <MESSAGE value="2023.8" />
+-    <option name="LAST_COMMIT_MESSAGE" value="2023.8" />
++    <MESSAGE value="2024.7" />
++    <option name="LAST_COMMIT_MESSAGE" value="2024.7" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: steamapitest2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import requests\r\nimport json\r\nimport time\r\nimport csv\r\nimport pandas as pd\r\n\r\ndf = pd.read_csv('GameList 2.csv', encoding='latin-1')\r\nappid_list = df['appid']\r\nlist_temp = []\r\nfor i in range(len(appid_list)):\r\n    url = \"https://api.gamalytic.com/game/\" + str(appid_list[i])\r\n    params = {\r\n        'format': 'json'\r\n    }\r\n    response = requests.get(url, headers={}, params=params)\r\n    if response.status_code == 200:\r\n        # Parse the response content as a JSON object\r\n        data = response.json()\r\n        json_data = json.dumps(data, indent=4)\r\n        with open(\"SteamGaData.json\", \"w\") as f:\r\n            # Write the JSON string to the txt file\r\n            f.write(json_data)\r\n        # 读取JSON文件\r\n        with open('SteamGaData.json') as f:\r\n            data = json.load(f)\r\n\r\n        # 获取所有价格的值\r\n        tags = data['tags']\r\n        name = data['name']\r\n        # 获取最小值\r\n        dict_temp = {'appid': str(appid_list[i]),'name': name, 'tags': tags}\r\n        list_temp.append(dict_temp)\r\n        with open('GameList_2_new_gama.csv', 'w', newline='', encoding='utf-8') as file:\r\n            writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())\r\n            writer.writeheader()\r\n            writer.writerows(list_temp)\r\n        print(\"Request succeed\")\r\n    else:\r\n        # Print an error message if the request failed\r\n        print(f\"Request failed with status code {response.status_code}\")\r\n    time.sleep(1)\r\n\r\nprint(list_temp)\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/steamapitest2.py b/steamapitest2.py
+--- a/steamapitest2.py	(revision 2a50b6531ea9422e8ed34261ec4cd9a628b48e09)
++++ b/steamapitest2.py	(date 1729109224961)
+@@ -7,12 +7,16 @@
+ df = pd.read_csv('GameList 2.csv', encoding='latin-1')
+ appid_list = df['appid']
+ list_temp = []
++api_key = "EGJlJay6LK8qx7LoU9iDux3w8MApXUd0"
++headers = {
++    'api-key': api_key,
++}
+ for i in range(len(appid_list)):
+     url = "https://api.gamalytic.com/game/" + str(appid_list[i])
+     params = {
+         'format': 'json'
+     }
+-    response = requests.get(url, headers={}, params=params)
++    response = requests.get(url, headers=headers, params=params)
+     if response.status_code == 200:
+         # Parse the response content as a JSON object
+         data = response.json()
