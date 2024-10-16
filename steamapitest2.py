@@ -7,12 +7,16 @@ import pandas as pd
 df = pd.read_csv('GameList 2.csv', encoding='latin-1')
 appid_list = df['appid']
 list_temp = []
+api_key = "EGJlJay6LK8qx7LoU9iDux3w8MApXUd0"
+headers = {
+    'api-key': api_key,
+}
 for i in range(len(appid_list)):
     url = "https://api.gamalytic.com/game/" + str(appid_list[i])
     params = {
         'format': 'json'
     }
-    response = requests.get(url, headers={}, params=params)
+    response = requests.get(url, headers=headers, params=params)
     if response.status_code == 200:
         # Parse the response content as a JSON object
         data = response.json()
