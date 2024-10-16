@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.8">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameList 2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList 2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoogleTrendsTest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleTrendsTest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewGames2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/NewGames2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onehotcsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/onehotcsv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steamapifulllist.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapifulllist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steamapitest2.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapitest2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtubeapitestexample.py" beforeDir="false" afterPath="$PROJECT_DIR$/youtubeapitestexample.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +29,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "arcboundavenger"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;arcboundavenger&quot;
   }
-}]]></component>
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -53,12 +43,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/arcboundavenger/Python1.git",
-    "accountId": "014e99f4-c146-4252-8e04-aa2f6e69a15c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/arcboundavenger/Python1.git&quot;,
+    &quot;accountId&quot;: &quot;2b75f1bf-a30e-49a7-99e5-2be18902a86f&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -75,13 +65,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.Boxplottest1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DateCount1900.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gamalyticapitest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.langPvalue.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mapwithcolorscale.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamspyapitest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.togetest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ztest111.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.steamsubgenrekmeans">
-    <configuration name="prophettest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.mapwithcolorscale">
+    <configuration name="Boxplottest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,7 +93,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prophettest1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Boxplottest1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="steamsubgenrekmeans" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="langPvalue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,7 +115,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamsubgenrekmeans.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langPvalue.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="step1deleteextratags" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mapwithcolorscale" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,7 +137,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step1deleteextratags.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mapwithcolorscale.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +146,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="step2createheatmap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamspyapitest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,7 +159,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step2createheatmap.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamspyapitest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,7 +168,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="usingpandstohandlesteamdata2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ztest111" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,7 +181,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/usingpandstohandlesteamdata2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ztest111.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,26 +191,26 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.prophettest1" />
-      <item itemvalue="Python.usingpandstohandlesteamdata2" />
-      <item itemvalue="Python.steamsubgenrekmeans" />
-      <item itemvalue="Python.step1deleteextratags" />
-      <item itemvalue="Python.step2createheatmap" />
+      <item itemvalue="Python.Boxplottest1" />
+      <item itemvalue="Python.steamspyapitest" />
+      <item itemvalue="Python.ztest111" />
+      <item itemvalue="Python.langPvalue" />
+      <item itemvalue="Python.mapwithcolorscale" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.steamsubgenrekmeans" />
-        <item itemvalue="Python.prophettest1" />
-        <item itemvalue="Python.usingpandstohandlesteamdata2" />
-        <item itemvalue="Python.step2createheatmap" />
-        <item itemvalue="Python.step1deleteextratags" />
+        <item itemvalue="Python.mapwithcolorscale" />
+        <item itemvalue="Python.langPvalue" />
+        <item itemvalue="Python.Boxplottest1" />
+        <item itemvalue="Python.ztest111" />
+        <item itemvalue="Python.steamspyapitest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
