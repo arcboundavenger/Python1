@@ -18,7 +18,7 @@ kmeans = KMeans(n_clusters=n_clusters, random_state=None)
 df['Cluster'] = kmeans.fit_predict(df[['Count of appid', 'Average Revenue', 'Sum of Revenue']])
 
 # 4. 可视化聚类结果为气泡图
-plt.figure(figsize=(8, 8))
+plt.figure(figsize=(10, 10))
 sns.scatterplot(data=df, x='Count of appid', y='Average Revenue', size='Sum of Revenue', legend=False, hue='Cluster', sizes=(50, 5000), palette='tab10')
 
 # 添加数据标签

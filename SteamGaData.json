@@ -1,0 +1,1117 @@
+{
+    "steamId": "2745530",
+    "name": "Going Upstream",
+    "description": "Paddle your canoe up the river as far as you can go! It's a simple game of just climbing up the river.",
+    "price": 0,
+    "reviews": 0,
+    "followers": 7,
+    "avgPlaytime": 0,
+    "reviewScore": 0,
+    "tags": [
+        "Action",
+        "Casual",
+        "Action-Adventure",
+        "Trivia",
+        "Runner",
+        "2.5D",
+        "3D",
+        "Cute",
+        "Cartoon",
+        "Cartoony",
+        "Top-Down",
+        "Comedy",
+        "Fantasy",
+        "Racing",
+        "Underwater",
+        "Funny",
+        "Atmospheric",
+        "Satire",
+        "Score Attack",
+        "Singleplayer"
+    ],
+    "genres": [
+        "Action",
+        "Casual",
+        "Indie"
+    ],
+    "features": [
+        "Single-player",
+        "Family Sharing",
+        "Profile Features Limited"
+    ],
+    "languages": [
+        "English"
+    ],
+    "developers": [
+        "Matsusoft"
+    ],
+    "publishers": [
+        "SQOOL"
+    ],
+    "releaseDate": 1709874000000,
+    "unreleased": false,
+    "earlyAccess": false,
+    "history": [
+        {
+            "timeStamp": 1709972950963,
+            "reviews": 0,
+            "price": 0,
+            "followers": 2,
+            "players": 0,
+            "sales": null,
+            "release": true
+        },
+        {
+            "timeStamp": 1710057402128,
+            "reviews": 0,
+            "price": 0,
+            "followers": 2,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710312900794,
+            "reviews": 0,
+            "price": 0,
+            "followers": 4,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710399372909,
+            "reviews": 0,
+            "price": 0,
+            "followers": 4,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710485836164,
+            "reviews": 0,
+            "price": 0,
+            "followers": 4,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710574629685,
+            "reviews": 0,
+            "price": 0,
+            "followers": 4,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710660676818,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710745222023,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710831583310,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1710916662637,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711002809228,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711093084981,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711174682559,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711174729413,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711262285708,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711348578074,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711434842045,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711521746203,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711607871942,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711694198791,
+            "reviews": 0,
+            "price": 0,
+            "followers": 5,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711780498761,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711780522262,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711867031693,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1711953689513,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712040238514,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712126802134,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712211474799,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712299807079,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712385486804,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712469779857,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712558375249,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712645979780,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712732394938,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712818737037,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712902701906,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1712989219564,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713075521207,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713163880899,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713249570167,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713335659788,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713421058541,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713509452306,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713594448328,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713679845493,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713767498333,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713853838178,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1713938638984,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714025610312,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714112649113,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714197761406,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714283896120,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714283916943,
+            "reviews": 0,
+            "price": 0,
+            "followers": 6,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714371841338,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714457045466,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714457085749,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714544904992,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714717905772,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714804046036,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714804067306,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714888964023,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714888985643,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1714976941969,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715063112219,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715149379383,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715234421218,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715322635739,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715408895582,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715581690906,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715668087780,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715754516757,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715840731515,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1715925563795,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716014053063,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716098746651,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716184909782,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716271128073,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716357451069,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716447051315,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716539078154,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716617177209,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716710134095,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716790134876,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716876183434,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1716971553230,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717057454166,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717135311391,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717230679315,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717308277821,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717402635607,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717480814081,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717567560627,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717653769028,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717740126707,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717826485026,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717924792247,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1717999934174,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718085761417,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718179897096,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718268508898,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718344987114,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718431341367,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718517627667,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718602110018,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718691816934,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718775723516,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718864700767,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1718974435639,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719034425552,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719120815264,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719207415119,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719293613166,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719380301717,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719466600864,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719553375417,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719639461431,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719725951912,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719812450280,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719885472728,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1719972878414,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720058375057,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720145285297,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720232339142,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720318101757,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720405055661,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720491781963,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720577780724,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720664297698,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720750712560,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720836937368,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1720922988079,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        },
+        {
+            "timeStamp": 1721009773978,
+            "reviews": 0,
+            "price": 0,
+            "followers": 7,
+            "players": 0,
+            "sales": null
+        }
+    ],
+    "copiesSold": 1,
+    "revenue": 0,
+    "players": 1,
+    "owners": 1,
+    "steamPercent": 1,
+    "estimateDetails": {
+        "reviewBased": 0,
+        "rankBased": null
+    },
+    "wishlists": 84,
+    "itemType": "game",
+    "itemCode": 0
+}
