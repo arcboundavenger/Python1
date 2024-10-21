@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.8">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_16_2024_1_08_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_16_2024_1_08_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameList 2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList 2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gen9_5000.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Gen9_5000.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/median_playtime.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/median_playtime.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeansreview.py" beforeDir="false" afterPath="$PROJECT_DIR$/kmeansreview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pvalue_results_2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/pvalue_results_2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steamapifulllist.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapifulllist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/steamapitest2.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapitest2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steamspyapitest.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamspyapitest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +53,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/arcboundavenger/Python1.git&quot;,
-    &quot;accountId&quot;: &quot;014e99f4-c146-4252-8e04-aa2f6e69a15c&quot;
+    &quot;accountId&quot;: &quot;2b75f1bf-a30e-49a7-99e5-2be18902a86f&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -70,40 +73,27 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Boxplottest1.executor": "Run",
+    "Python.DateCount1900.executor": "Run",
     "Python.EAChineseReviewScore.executor": "Run",
     "Python.EAReviewScore.executor": "Run",
     "Python.Medianplaytimevsreview.executor": "Run",
+    "Python.gamalyticapitest.executor": "Run",
     "Python.kmeansreview.executor": "Run",
+    "Python.langPvalue.executor": "Run",
+    "Python.mapwithcolorscale.executor": "Run",
     "Python.plot_reviews.executor": "Run",
+    "Python.pricegroupboxplot.executor": "Run",
+    "Python.steamapifulllist.executor": "Run",
     "Python.steamspyapitest.executor": "Run",
+    "Python.togetest.executor": "Run",
+    "Python.ztest111.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.kmeansreview">
-    <configuration name="EAChineseReviewScore" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EAChineseReviewScore.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.steamapifulllist">
     <configuration name="Medianplaytimevsreview" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
@@ -126,7 +116,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kmeansreview" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mapwithcolorscale" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,7 +129,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kmeansreview.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mapwithcolorscale.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,7 +160,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="steamspyapitest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pricegroupboxplot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,7 +173,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamspyapitest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pricegroupboxplot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="steamapifulllist" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamapifulllist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,26 +205,26 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.EAChineseReviewScore" />
+      <item itemvalue="Python.steamapifulllist" />
+      <item itemvalue="Python.mapwithcolorscale" />
       <item itemvalue="Python.Medianplaytimevsreview" />
-      <item itemvalue="Python.kmeansreview" />
       <item itemvalue="Python.plot_reviews" />
-      <item itemvalue="Python.steamspyapitest" />
+      <item itemvalue="Python.pricegroupboxplot" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.kmeansreview" />
+        <item itemvalue="Python.steamapifulllist" />
+        <item itemvalue="Python.mapwithcolorscale" />
+        <item itemvalue="Python.pricegroupboxplot" />
         <item itemvalue="Python.Medianplaytimevsreview" />
         <item itemvalue="Python.plot_reviews" />
-        <item itemvalue="Python.steamspyapitest" />
-        <item itemvalue="Python.EAChineseReviewScore" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
       </set>
     </attachedChunks>
   </component>

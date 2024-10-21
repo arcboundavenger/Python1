@@ -1,30 +1,23 @@
 import requests
-import json
-import csv
 import pandas as pd
 
-# Define the URL of the API
-url = "https://api.steampowered.com/ISteamApps/GetAppList/v2/"
+# 从 API 获取 JSON 数据
+url = "http://api.steampowered.com/ISteamApps/GetAppList/v2/"
+response = requests.get(url)
 
-# Define the query parameters
-params = {
-    'format':'json',
-}
-
-# Make a GET request to the URL with the parameters
-response = requests.get(url, params=params)
+# 检查请求是否成功
 if response.status_code == 200:
-    data=response.json()
-    json_data=json.dumps(data)
-    with open("data.json", "w") as f:
-        # Write the JSON string to the txt file
-        f.write(json_data)
-    # 将JSON数据转换为DataFrame对象
-    df = pd.DataFrame(data['applist']['apps'])
-    # 将DataFrame对象保存为CSV文件
-    df.to_csv('steam_app_list.csv', index=False)
+    data = response.json()
 
+    # 提取 apps 列表
+    apps = data['applist']['apps']
+
+    # 将 apps 列表转换为 DataFrame
+    df = pd.DataFrame(apps)
+
+    # 将 DataFrame 写入 Excel 文件
+    df.to_excel('steam_apps.xlsx', index=False)
+
+    print("Excel 文件已生成：steam_apps.xlsx")
 else:
-    # Print an error message if the request failed
-    print(f"Request failed with status code {response.status_code}")
-
+    print("请求失败，状态码：", response.status_code)

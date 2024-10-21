@@ -17,41 +17,24 @@ df = pd.read_excel(file_path, sheet_name='All')
 # 将相关列转换为数值型，如果无法转换则设置为 NaN
 df['ScoreGap'] = pd.to_numeric(df['ScoreGap'], errors='coerce')
 df['price'] = pd.to_numeric(df['price'], errors='coerce')
+df['reviewScore'] = pd.to_numeric(df['reviewScore'], errors='coerce')
 
 # 过滤掉包含 NaN 的行
-df = df.dropna(subset=['ScoreGap', 'price'])
+df = df.dropna(subset=['ScoreGap', 'price', 'reviewScore'])
 
 # 选择要聚类的特征
-X = df[['ScoreGap', 'price']]
+X = df[['ScoreGap', 'price', 'reviewScore']]
 
 # 数据标准化
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# 使用轮廓系数确定最佳聚类数
-silhouette_scores = []
-k_range = range(2, 11)  # 从2到10个聚类
-for k in k_range:
-    kmeans = KMeans(n_clusters=k, random_state=42)
-    kmeans.fit(X_scaled)
-    score = silhouette_score(X_scaled, kmeans.labels_)
-    silhouette_scores.append(score)
-
-# 绘制轮廓系数图
-plt.figure(figsize=(10, 6))
-plt.plot(k_range, silhouette_scores, marker='o')
-plt.title('Silhouette Score to Determine Optimal Number of Clusters')
-plt.xlabel('Number of Clusters (k)')
-plt.ylabel('Silhouette Score')
-plt.grid()
-plt.show()
-
-# K-means 聚类（假设选择的聚类数为3）
-optimal_k = 3  # 根据轮廓系数图选择聚类数
+# K-means 聚类（设置聚类数为4）
+optimal_k = 4
 kmeans = KMeans(n_clusters=optimal_k, random_state=42)
 df['cluster'] = kmeans.fit_predict(X_scaled)
 
-# 可视化聚类结果
+# 可视化聚类结果（横轴为 price，纵轴为 ScoreGap）
 plt.figure(figsize=(12, 8))
 plt.scatter(df['price'], df['ScoreGap'], c=df['cluster'], cmap='viridis', alpha=0.6)
 
@@ -64,6 +47,13 @@ plt.xlabel('Price')
 plt.ylabel('Score Gap')
 plt.grid()
 plt.tight_layout()
-
-# 显示图形
 plt.show()
+
+# 输出到 Excel
+output_file = 'clustered_results_with_steamId.xlsx'
+with pd.ExcelWriter(output_file) as writer:
+    for cluster_id in range(optimal_k):
+        cluster_data = df[df['cluster'] == cluster_id][['steamId', 'name', 'ScoreGap', 'price', 'reviewScore']]
+        cluster_data.to_excel(writer, sheet_name=f'Cluster_{cluster_id}', index=False)
+
+print(f"输出成功，文件名为：{output_file}")
