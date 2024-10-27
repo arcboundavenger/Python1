@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2023.8">
+    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2024.10.16">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_16_2024_1_08_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_16_2024_1_08_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameList 2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList 2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameList_2_new_gama.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameList_2_new_gama.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gen9_5000.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Gen9_5000.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/median_playtime.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/median_playtime.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SteamGaData.json" beforeDir="false" afterPath="$PROJECT_DIR$/SteamGaData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeansforsteamdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/kmeansforsteamdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeansreview.py" beforeDir="false" afterPath="$PROJECT_DIR$/kmeansreview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steam_app_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/steam_app_list.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/steamapitest2.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamapitest2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steamspyapitest.py" beforeDir="false" afterPath="$PROJECT_DIR$/steamspyapitest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/useanotherpctotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/useanotherpctotest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/arcboundavenger/Python1.git&quot;,
-    &quot;accountId&quot;: &quot;014e99f4-c146-4252-8e04-aa2f6e69a15c&quot;
+    &quot;accountId&quot;: &quot;c7d4354f-1622-4559-a977-a83dc02b0224&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -67,22 +75,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Boxplottest1.executor": "Run",
-    "Python.EAChineseReviewScore.executor": "Run",
-    "Python.EAReviewScore.executor": "Run",
-    "Python.Medianplaytimevsreview.executor": "Run",
-    "Python.kmeansreview.executor": "Run",
-    "Python.plot_reviews.executor": "Run",
-    "Python.steamspyapitest.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Boxplottest1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EAChineseReviewScore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EAReviewScore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Medianplaytimevsreview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kmeansforsteamdata.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kmeansreview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_reviews.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamapifulllist.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamapitest2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatahandle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatahandle2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatamultipleplot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamspyapitest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamspyapitest1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.useanotherpctotest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.kmeansreview">
-    <configuration name="EAChineseReviewScore" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Python.steamdatahandle">
+    <configuration name="kmeansforsteamdata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,7 +111,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EAChineseReviewScore.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kmeansforsteamdata.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,7 +120,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Medianplaytimevsreview" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamdatahandle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,7 +133,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Medianplaytimevsreview.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamdatahandle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,7 +142,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kmeansreview" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamdatahandle2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,7 +155,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kmeansreview.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamdatahandle2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,7 +164,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plot_reviews" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamdatamultipleplot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,7 +177,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_reviews.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamdatamultipleplot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,7 +186,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="steamspyapitest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="steamspyapitest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,7 +199,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamspyapitest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamspyapitest1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,26 +209,26 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.EAChineseReviewScore" />
-      <item itemvalue="Python.Medianplaytimevsreview" />
-      <item itemvalue="Python.kmeansreview" />
-      <item itemvalue="Python.plot_reviews" />
-      <item itemvalue="Python.steamspyapitest" />
+      <item itemvalue="Python.steamdatamultipleplot" />
+      <item itemvalue="Python.steamspyapitest1" />
+      <item itemvalue="Python.kmeansforsteamdata" />
+      <item itemvalue="Python.steamdatahandle" />
+      <item itemvalue="Python.steamdatahandle2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.kmeansreview" />
-        <item itemvalue="Python.Medianplaytimevsreview" />
-        <item itemvalue="Python.plot_reviews" />
-        <item itemvalue="Python.steamspyapitest" />
-        <item itemvalue="Python.EAChineseReviewScore" />
+        <item itemvalue="Python.steamdatahandle" />
+        <item itemvalue="Python.kmeansforsteamdata" />
+        <item itemvalue="Python.steamdatahandle2" />
+        <item itemvalue="Python.steamspyapitest1" />
+        <item itemvalue="Python.steamdatamultipleplot" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
@@ -304,7 +320,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691488881821</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="2024.10.16">
+      <option name="closed" value="true" />
+      <created>1729120136271</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729120136271</updated>
+    </task>
+    <task id="LOCAL-00013" summary="2024.10.16">
+      <option name="closed" value="true" />
+      <created>1729120151271</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729120151271</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +365,7 @@
     <MESSAGE value="2023.5" />
     <MESSAGE value="2023.7" />
     <MESSAGE value="2023.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023.8" />
+    <MESSAGE value="2024.10.16" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024.10.16" />
   </component>
 </project>

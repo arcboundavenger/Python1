@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 
 # 1. 读取Excel表格数据
-df = pd.read_excel('Steam_all_premium_games_detailed_edited.xlsx')
+df = pd.read_excel('Steam_all_premium_games_detailed_edited_all.xlsx')
 
 # 2. 数据预处理（检查缺失值等，这里假设数据已经是干净的）
 # 如果需要，可以添加如下代码来处理缺失值：
