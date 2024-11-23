@@ -11,8 +11,11 @@ df['Release'] = pd.to_datetime(df['Release'])  # 转换为 datetime 格式
 # 添加年份列
 df['year'] = df['Release'].dt.year
 
-# 生成从1970年到2024年的年份列表
-years = pd.Series(range(1970, 2025))
+# 筛选 2014 到 2024 年的数据
+df = df[(df['year'] >= 2003) & (df['year'] <= 2024)]
+
+# 生成从2014年到2024年的年份列表
+years = pd.Series(range(2003, 2025))
 
 # 初始化一个新的 DataFrame 来存储累计数据
 cumulative_data = pd.DataFrame(columns=['year', 'Sub-Genre', 'appid_count', 'revenue_mean'])
@@ -39,13 +42,13 @@ revenue_upper_quartile = subgenre_agg['revenue_mean'].quantile(0.75)  # 收入�
 appid_count_lower_quartile = subgenre_agg['appid_count'].quantile(0.25)  # appid_count 的下四分位数
 
 # 创建一个新的图形用于绘制折线图
-plt.figure(figsize=(8, 8))  # 设置图形尺寸为正方形
+plt.figure(figsize=(9, 9))  # 设置图形尺寸为正方形
 
 # 选择要绘制的 subgenre 列表
 subgenres_to_plot = [
-    'RTS',
-    'Fighting',
-    'Driving'
+    'Asynchronous Multiplayer',
+    'Life Sim',
+    'Roguelike Deckbuilder'
 ]
 
 # 绘制每个指定 subgenre 的折线图
@@ -62,20 +65,13 @@ for subgenre in subgenres_to_plot:
 plt.xscale('log')  # 设置横轴为对数坐标
 plt.yscale('log')  # 设置纵轴为对数坐标
 
-# 添加辅助线
-plt.axhline(y=revenue_upper_quartile, color='orange', linestyle='--', label='Revenue Upper Quartile')
-plt.axvline(x=appid_count_lower_quartile, color='red', linestyle='--', label='App ID Count Lower Quartile')
-
 # 设置图形细节
-plt.title('Cumulative Trends for Selected Sub-Genres: App ID Count vs. Average Revenue (Log-Log Scale)')
-plt.xlabel('Number of App IDs (Log Scale)')
-plt.ylabel('Average Revenue (Log Scale)')
+plt.xlabel('Number of Games')
+plt.ylabel('Average Revenue (Unit: $)')
 plt.grid(True)
 
-
-
-# 添加图例，放在图形内部
-plt.legend(title='Sub-Genres', loc='upper left', bbox_to_anchor=(0.1, 0.9))
+# 添加图例，放在左下角
+plt.legend(title='Sub-Genres', loc='lower left', bbox_to_anchor=(0.0, 0.0))
 
 # 设置坐标轴为正方形
 plt.axis('equal')

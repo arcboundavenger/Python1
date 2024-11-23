@@ -9,14 +9,14 @@ point_of_view_list = ['Isometric', 'Top-Down', 'Third Person', 'First-Person']
 
 
 # 读取原始xlsx文件
-df = pd.read_excel('Gamelist_gama_all.xlsx')
+df = pd.read_excel('sexual.xlsx')
 
 # 创建新的DataFrame来存储结果
 new_df = pd.DataFrame(columns=['appid', 'Main Genre', 'Sub-Genre', 'Niche Genre', 'Art Style', 'Theme', 'Game Mode', 'POV'])
 
 # 遍历每一行
 for index, row in df.iterrows():
-    tags = row['Tags']
+    tags = row['tags']
     categories = {}
 
     # 检查tags是否为空值
@@ -39,5 +39,5 @@ for index, row in df.iterrows():
         new_df = pd.concat([new_df, pd.DataFrame(categories, index=[0])], ignore_index=True)
 
 # 将结果保存到新的xlsx文件
-new_df.to_excel('output_Gamelist_gama_all.xlsx', index=False)
+new_df.to_excel('output_sexual_all.xlsx', index=False)
 print('Done')
