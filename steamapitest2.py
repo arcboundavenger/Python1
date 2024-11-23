@@ -7,7 +7,7 @@ import pandas as pd
 df = pd.read_csv('GameList 2.csv', encoding='latin-1')
 appid_list = df['appid']
 list_temp = []
-api_key = "EGJlJay6LK8qx7LoU9iDux3w8MApXUd0"
+api_key = ""
 headers = {
     'api-key': api_key,
 }
@@ -31,8 +31,11 @@ for i in range(len(appid_list)):
         # 获取所有价格的值
         tags = data['tags']
         name = data['name']
+        copiesSold = data['copiesSold']
+        totalRevenue= data['totalRevenue']
+
         # 获取最小值
-        dict_temp = {'appid': str(appid_list[i]),'name': name, 'tags': tags}
+        dict_temp = {'appid': str(appid_list[i]),'name': name, 'tags': tags, 'copiesSold': copiesSold, 'totalRevenue': totalRevenue}
         list_temp.append(dict_temp)
         with open('GameList_2_new_gama.csv', 'w', newline='', encoding='utf-8') as file:
             writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())
