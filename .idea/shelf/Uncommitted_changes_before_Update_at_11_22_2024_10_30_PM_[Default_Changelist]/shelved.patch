@@ -1,0 +1,81 @@
+Index: steamapitest2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import requests\r\nimport json\r\nimport time\r\nimport csv\r\nimport pandas as pd\r\n\r\ndf = pd.read_csv('GameList 2.csv', encoding='latin-1')\r\nappid_list = df['appid']\r\nlist_temp = []\r\napi_key = \"EGJlJay6LK8qx7LoU9iDux3w8MApXUd0\"\r\nheaders = {\r\n    'api-key': api_key,\r\n}\r\nfor i in range(len(appid_list)):\r\n    url = \"https://api.gamalytic.com/game/\" + str(appid_list[i])\r\n    params = {\r\n        'format': 'json'\r\n    }\r\n    response = requests.get(url, headers=headers, params=params)\r\n    if response.status_code == 200:\r\n        # Parse the response content as a JSON object\r\n        data = response.json()\r\n        json_data = json.dumps(data, indent=4)\r\n        with open(\"SteamGaData.json\", \"w\") as f:\r\n            # Write the JSON string to the txt file\r\n            f.write(json_data)\r\n        # 读取JSON文件\r\n        with open('SteamGaData.json') as f:\r\n            data = json.load(f)\r\n\r\n        # 获取所有价格的值\r\n        tags = data['tags']\r\n        name = data['name']\r\n        # 获取最小值\r\n        dict_temp = {'appid': str(appid_list[i]),'name': name, 'tags': tags}\r\n        list_temp.append(dict_temp)\r\n        with open('GameList_2_new_gama.csv', 'w', newline='', encoding='utf-8') as file:\r\n            writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())\r\n            writer.writeheader()\r\n            writer.writerows(list_temp)\r\n        print(\"Request succeed\")\r\n    else:\r\n        # Print an error message if the request failed\r\n        print(f\"Request failed with status code {response.status_code}\")\r\n    time.sleep(1)\r\n\r\nprint(list_temp)\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/steamapitest2.py b/steamapitest2.py
+--- a/steamapitest2.py	
++++ b/steamapitest2.py	
+@@ -11,8 +11,9 @@
+ headers = {
+     'api-key': api_key,
+ }
++
+ for i in range(len(appid_list)):
+-    url = "https://api.gamalytic.com/game/" + str(appid_list[i])
++    url = "https://api.gamalytic.com/game/" + str(int(appid_list[i]))
+     params = {
+         'format': 'json'
+     }
+@@ -20,29 +21,41 @@
+     if response.status_code == 200:
+         # Parse the response content as a JSON object
+         data = response.json()
+-        json_data = json.dumps(data, indent=4)
+-        with open("SteamGaData.json", "w") as f:
+-            # Write the JSON string to the txt file
+-            f.write(json_data)
+-        # 读取JSON文件
+-        with open('SteamGaData.json') as f:
+-            data = json.load(f)
++
++        # 提取所需字段
++        price = data.get('price', None)
++        reviews = data.get('reviews', None)
++        review_score = data.get('reviewScore', None)
++        copies_sold = data.get('copiesSold', None)
++        revenue = data.get('revenue', None)
++        followers = data.get('followers', None)
+ 
+-        # 获取所有价格的值
+-        tags = data['tags']
+-        name = data['name']
+-        # 获取最小值
+-        dict_temp = {'appid': str(appid_list[i]),'name': name, 'tags': tags}
++        # 获取游戏名称和标签
++        tags = data.get('tags', [])
++        name = data.get('name', 'Unknown')
++
++        # 创建字典并添加到列表
++        dict_temp = {
++            'appid': str(appid_list[i]),
++            'name': name,
++            'tags': tags,
++            'price': price,
++            'reviews': reviews,
++            'reviewScore': review_score,
++            'copiesSold': copies_sold,
++            'revenue': revenue,
++            'followers': followers
++        }
+         list_temp.append(dict_temp)
+-        with open('GameList_2_new_gama.csv', 'w', newline='', encoding='utf-8') as file:
++
++        # 写入 CSV 文件
++        with open('GameList_3_new_gama.csv', 'w', newline='', encoding='utf-8') as file:
+             writer = csv.DictWriter(file, fieldnames=list_temp[0].keys())
+             writer.writeheader()
+             writer.writerows(list_temp)
+-        print("Request succeed")
++
++        print(f"Request succeed for appid: {dict_temp['appid']}")
+     else:
+-        # Print an error message if the request failed
+         print(f"Request failed with status code {response.status_code}")
++
+     time.sleep(1)
+-
+-print(list_temp)
+-
