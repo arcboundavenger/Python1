@@ -47,9 +47,13 @@ for i, year in enumerate(years):
     subgenre_agg['Cluster'] = kmeans.fit_predict(X)
 
     # 确保每个簇的颜色一致
-    # 获取唯一的簇标签并对其排序
     unique_clusters = np.unique(subgenre_agg['Cluster'])
-    cluster_colors = {cluster: cmap(i) for i, cluster in enumerate(sorted(unique_clusters))}
+    cluster_colors = {cluster: cmap(i) for i, cluster in enumerate(unique_clusters)}
+
+    # 如果是 2013 年，手动对调绿色和黄色
+    if year == 2013:
+        # 对调颜色
+        cluster_colors[unique_clusters[2]], cluster_colors[unique_clusters[3]] = cluster_colors[unique_clusters[3]], cluster_colors[unique_clusters[2]]
 
     # 选择子图（2行3列）
     ax = axs[i // 3, i % 3]
