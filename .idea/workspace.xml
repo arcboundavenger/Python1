@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2024.11.22 Ref2" />
+    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2024.11.22 Ref2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,37 +63,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Boxplottest1.executor": "Run",
-    "Python.EAChineseReviewScore.executor": "Run",
-    "Python.EAReviewScore.executor": "Run",
-    "Python.Medianplaytimevsreview.executor": "Run",
-    "Python.dataoverviewboxplot.executor": "Run",
-    "Python.kmeansforsteamdata.executor": "Run",
-    "Python.kmeansreview.executor": "Run",
-    "Python.ldatest.executor": "Run",
-    "Python.loadberttest.executor": "Run",
-    "Python.plot_reviews.executor": "Run",
-    "Python.revenuepowerlawdistribution.executor": "Run",
-    "Python.steamapifulllist.executor": "Run",
-    "Python.steamapitest2.executor": "Run",
-    "Python.steamdatahandle.executor": "Run",
-    "Python.steamdatahandle2.executor": "Run",
-    "Python.steamdatahandle6fig.executor": "Run",
-    "Python.steamdatamultipleplot.executor": "Run",
-    "Python.steamreviewsentiment.executor": "Run",
-    "Python.steamspyapitest.executor": "Run",
-    "Python.steamspyapitest1.executor": "Run",
-    "Python.steamsubgenreHHI.executor": "Run",
-    "Python.useanotherpctotest.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Boxplottest1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EAChineseReviewScore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EAReviewScore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Medianplaytimevsreview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dataoverviewboxplot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kmeansforsteamdata.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kmeansreview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ldatest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.loadberttest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_reviews.executor&quot;: &quot;Run&quot;,
+    &quot;Python.randomrequestbydd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.revenuepowerlawdistribution.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamapifulllist.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamapitest2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatahandle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatahandle2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatahandle6fig.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamdatamultipleplot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamreviewsentiment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamspyapitest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamspyapitest1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.steamsubgenreHHI.executor&quot;: &quot;Run&quot;,
+    &quot;Python.useanotherpctotest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.loadberttest">
-    <configuration name="dataoverviewboxplot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Python.dataoverviewboxplot (1)">
+    <configuration name="dataoverviewboxplot (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,11 +103,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataoverviewboxplot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref2/dataoverviewboxplot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +138,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="steamapitest2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="randomrequestbydd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +151,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steamapitest2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/randomrequestbydd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,19 +205,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.dataoverviewboxplot (1)" />
+      <item itemvalue="Python.randomrequestbydd" />
       <item itemvalue="Python.loadberttest" />
-      <item itemvalue="Python.steamreviewsentiment" />
       <item itemvalue="Python.steamdatahandle6fig" />
-      <item itemvalue="Python.dataoverviewboxplot" />
-      <item itemvalue="Python.steamapitest2" />
+      <item itemvalue="Python.steamreviewsentiment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dataoverviewboxplot (1)" />
+        <item itemvalue="Python.randomrequestbydd" />
         <item itemvalue="Python.loadberttest" />
         <item itemvalue="Python.steamreviewsentiment" />
         <item itemvalue="Python.steamdatahandle6fig" />
-        <item itemvalue="Python.dataoverviewboxplot" />
-        <item itemvalue="Python.steamapitest2" />
       </list>
     </recent_temporary>
   </component>
@@ -361,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732501912858</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="2024.11.22 Ref2">
+      <option name="closed" value="true" />
+      <created>1732502024929</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732502024929</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
