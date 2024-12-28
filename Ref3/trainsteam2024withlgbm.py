@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 data = pd.read_excel('Steam Games 2024_Filled with MC and Twitch_used for Analysis.xlsx', sheet_name='Steam Games 2024')
 
 # 选择目标变量和特征
-y = data['LnTotalReviews']
-X = data.drop(columns=['LnTotalReviews', 'AppID', 'Estimated owners', 'Release date'])
+y = data['LnRevenue']
+X = data.drop(columns=['LnRevenue', 'AppID', 'Estimated owners', 'Release date'])
 
 # 确保所有数据都是数值类型
 X = X.apply(pd.to_numeric, errors='coerce')
@@ -30,6 +30,6 @@ r2 = r2_score(y_test, y_pred)
 print(f'R^2 Score: {r2}')
 
 # 绘制特征的重要性
-plot_importance(model, importance_type='split', max_num_features=10)
+plot_importance(model, importance_type='split')
 plt.title('Feature Importance')
 plt.show()  # 只调用一次
