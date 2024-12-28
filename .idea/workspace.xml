@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2024.11.22 Ref2">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_10_30_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_2024_10_30_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2024_7_57_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_2024_7_57_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/Steam Games 2024_Filled with MC and Twitch_used for Analysis.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/Steam Games 2024_Filled with MC and Twitch_used for Analysis.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/trainsteam2024withlgbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/trainsteam2024withlgbm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +79,6 @@
     &quot;Python.ldatest.executor&quot;: &quot;Run&quot;,
     &quot;Python.loadberttest.executor&quot;: &quot;Run&quot;,
     &quot;Python.plot_reviews.executor&quot;: &quot;Run&quot;,
-    &quot;Python.randomrequestbydd.executor&quot;: &quot;Run&quot;,
     &quot;Python.revenuepowerlawdistribution.executor&quot;: &quot;Run&quot;,
     &quot;Python.steamapifulllist.executor&quot;: &quot;Run&quot;,
     &quot;Python.steamapitest2.executor&quot;: &quot;Run&quot;,
@@ -87,14 +90,15 @@
     &quot;Python.steamspyapitest.executor&quot;: &quot;Run&quot;,
     &quot;Python.steamspyapitest1.executor&quot;: &quot;Run&quot;,
     &quot;Python.steamsubgenreHHI.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trainsteam2024withlgbm.executor&quot;: &quot;Run&quot;,
     &quot;Python.useanotherpctotest.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.dataoverviewboxplot (1)">
-    <configuration name="dataoverviewboxplot (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.trainsteam2024withlgbm">
+    <configuration name="dataoverviewboxplot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref2/dataoverviewboxplot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataoverviewboxplot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,28 +134,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loadberttest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="randomrequestbydd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/randomrequestbydd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,20 +186,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="trainsteam2024withlgbm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/trainsteam2024withlgbm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.dataoverviewboxplot (1)" />
-      <item itemvalue="Python.randomrequestbydd" />
+      <item itemvalue="Python.dataoverviewboxplot" />
       <item itemvalue="Python.loadberttest" />
       <item itemvalue="Python.steamdatahandle6fig" />
       <item itemvalue="Python.steamreviewsentiment" />
+      <item itemvalue="Python.trainsteam2024withlgbm" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dataoverviewboxplot (1)" />
-        <item itemvalue="Python.randomrequestbydd" />
+        <item itemvalue="Python.trainsteam2024withlgbm" />
         <item itemvalue="Python.loadberttest" />
         <item itemvalue="Python.steamreviewsentiment" />
         <item itemvalue="Python.steamdatahandle6fig" />
+        <item itemvalue="Python.dataoverviewboxplot" />
       </list>
     </recent_temporary>
   </component>
@@ -364,15 +368,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732501912858</updated>
     </task>
-    <task id="LOCAL-00018" summary="2024.11.22 Ref2">
-      <option name="closed" value="true" />
-      <created>1732502024929</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1732502024929</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
