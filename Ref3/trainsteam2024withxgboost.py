@@ -1,5 +1,5 @@
 import pandas as pd
-from lightgbm import LGBMRegressor, plot_importance
+import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import numpy as np
@@ -19,7 +19,7 @@ X = X.apply(pd.to_numeric, errors='coerce')
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 创建并训练模型（使用默认参数）
-model = LGBMRegressor()
+model = xgb.XGBRegressor()
 model.fit(X_train, y_train)
 
 # 预测
@@ -72,6 +72,6 @@ plt.tight_layout()
 plt.show()
 
 # 绘制特征的重要性
-plot_importance(model, importance_type='split')
+xgb.plot_importance(model)
 plt.title('Feature Importance')
 plt.show()

@@ -1,5 +1,5 @@
 import pandas as pd
-from lightgbm import LGBMRegressor, plot_importance
+from catboost import CatBoostRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import numpy as np
@@ -19,7 +19,7 @@ X = X.apply(pd.to_numeric, errors='coerce')
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 创建并训练模型（使用默认参数）
-model = LGBMRegressor()
+model = CatBoostRegressor(silent=True)  # silent=True 以禁止训练时的输出
 model.fit(X_train, y_train)
 
 # 预测
@@ -72,6 +72,11 @@ plt.tight_layout()
 plt.show()
 
 # 绘制特征的重要性
-plot_importance(model, importance_type='split')
+feature_importances = model.get_feature_importance()
+sorted_indices = np.argsort(feature_importances)  # 从小到大排序
+
+# 画图
+plt.barh(range(len(feature_importances)), feature_importances[sorted_indices])
+plt.yticks(range(len(feature_importances)), X.columns[sorted_indices])  # 根据排序后的索引调整特征名称
 plt.title('Feature Importance')
 plt.show()

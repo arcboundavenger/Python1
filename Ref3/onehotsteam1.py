@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 读取 XLSX 文件
-file_path = "Steam Games 2024_Filled with MC and Twitch.xlsx"  # 替换为你的文件路径
+file_path = "Interim_1.xlsx"  # 替换为你的文件路径
 df = pd.read_excel(file_path)
 
 # 保留 AppID 列
@@ -20,7 +20,7 @@ Supported_languages = df['Supported languages'].str.get_dummies(sep=',')
 df_encoded = pd.concat([app_ids, Supported_languages, categories, genres], axis=1)
 
 # 保存结果到新文件 (XLSX 格式)
-output_path = "Steam Games 2024_Filled with MC and Twitch_Encoded.xlsx"
+output_path = "Interim_1_Encoded.xlsx"
 df_encoded.to_excel(output_path, index=False)
 
 print(f"One-hot encoding 完成！结果已保存到 {output_path}")

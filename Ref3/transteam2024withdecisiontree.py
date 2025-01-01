@@ -1,5 +1,5 @@
 import pandas as pd
-from lightgbm import LGBMRegressor, plot_importance
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import numpy as np
@@ -19,7 +19,7 @@ X = X.apply(pd.to_numeric, errors='coerce')
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 创建并训练模型（使用默认参数）
-model = LGBMRegressor()
+model = DecisionTreeRegressor(random_state=42)
 model.fit(X_train, y_train)
 
 # 预测
@@ -71,7 +71,20 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 
-# 绘制特征的重要性
-plot_importance(model, importance_type='split')
+# 计算特征重要性
+importances = model.feature_importances_
+indices = np.argsort(importances)[::-1]  # 降序索引
+
+# 创建特征重要性图，横向条形图
+plt.figure(figsize=(10, 6))
 plt.title('Feature Importance')
+plt.barh(range(X.shape[1]), importances[indices], align='center')
+plt.yticks(range(X.shape[1]), [X.columns[i] for i in indices])
+plt.xlim([0, importances.max() + 0.05])  # 添加一点额外空间在右侧
+plt.xlabel('Importance')
+plt.ylabel('Features')
+
+# 颠倒y轴顺序
+plt.gca().invert_yaxis()  # 这里颠倒y轴，使得最重要的特征在顶部
+
 plt.show()
