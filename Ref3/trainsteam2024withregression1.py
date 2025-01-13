@@ -19,7 +19,7 @@ X = data.drop(columns=['LnRevenue', 'AppID', 'Estimated owners', 'Release date']
 X = sm.add_constant(X)  # 添加常数项
 
 # 划分数据集
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 
 # 拟合模型
 model = sm.OLS(y_train, X_train).fit()
@@ -42,25 +42,31 @@ print(f"R²: {r_squared}, F: {f_value}")
 
 # 计算残差
 residuals = y_test - y_pred
+# 创建一个包含两个子图的图形，横向排列
+fig, axs = plt.subplots(1, 2, figsize=(12, 12))  # 确保图形的高度和宽度相同
 
 # 绘制残差图
-plt.figure(figsize=(10, 6))
-plt.scatter(y_pred, residuals, alpha=0.5)
-plt.axhline(0, color='red', linestyle='--')
-plt.title('Residual Plot')
-plt.xlabel('Predicted Values')
-plt.ylabel('Residuals')
-plt.grid()
-plt.show()
+axs[0].scatter(y_pred, residuals, alpha=0.5)
+axs[0].axhline(0, color='red', linestyle='--')
+axs[0].set_title('Residual Plot')
+axs[0].set_xlabel('Predicted Values')
+axs[0].set_ylabel('Residuals')
+axs[0].grid()
 
 # 绘制预测误差图
-plt.figure(figsize=(10, 6))
-plt.scatter(y_test, y_pred, alpha=0.5)
-plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color='red', linestyle='--')
-plt.title('Prediction Error Plot')
-plt.xlabel('Actual Values')
-plt.ylabel('Predicted Values')
-plt.grid()
+axs[1].scatter(y_test, y_pred, alpha=0.5)
+axs[1].plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color='red', linestyle='--')
+axs[1].set_title('Prediction Error Plot')
+axs[1].set_xlabel('Actual Values')
+axs[1].set_ylabel('Predicted Values')
+axs[1].grid()
+
+# 调整每个子图的大小为正方形
+for ax in axs:
+    ax.set_aspect('equal', adjustable='datalim')
+
+# 显示图形
+plt.tight_layout()
 plt.show()
 
 # 处理 p 值和显著性以及其他统计信息

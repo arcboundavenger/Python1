@@ -16,7 +16,7 @@ X = data.drop(columns=['LnRevenue', 'AppID', 'Estimated owners', 'Release date']
 X = X.apply(pd.to_numeric, errors='coerce')
 
 # 划分训练集和测试集
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 
 # 创建并训练模型（使用默认参数）
 model = CatBoostRegressor(silent=True)  # silent=True 以禁止训练时的输出

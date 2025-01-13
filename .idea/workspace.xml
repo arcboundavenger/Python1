@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2024.12.27">
+    <list default="true" id="bc68ae17-78db-4fa7-ae61-50baa3711122" name="Default Changelist" comment="2025.1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ref2/GameList 2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Ref2/GameList 2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ref3/Steam Games 2024_Filled with MC and Twitch_used for Analysis.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/Steam Games 2024_Filled with MC and Twitch_used for Analysis.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ref3/drawcorrelationplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/drawcorrelationplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ref3/onehotsteam1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/onehotsteam1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/drawdistribution1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/drawdistribution1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/trainsteam2024withcatboost.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/trainsteam2024withcatboost.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ref3/trainsteam2024withlgbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/trainsteam2024withlgbm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ref3/trainsteam2024withregression1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/trainsteam2024withregression1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/trainsteam2024withrf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/trainsteam2024withrf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/trainsteam2024withxgboost.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/trainsteam2024withxgboost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ref3/transteam2024withdecisiontree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ref3/transteam2024withdecisiontree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +76,12 @@
     &quot;Python.EAChineseReviewScore.executor&quot;: &quot;Run&quot;,
     &quot;Python.EAReviewScore.executor&quot;: &quot;Run&quot;,
     &quot;Python.Medianplaytimevsreview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VIFcomputing.executor&quot;: &quot;Run&quot;,
     &quot;Python.clusteringwithfeatures1.executor&quot;: &quot;Run&quot;,
     &quot;Python.dataoverviewboxplot.executor&quot;: &quot;Run&quot;,
     &quot;Python.drawcorrelationplot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.drawdistribution1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.drawdistribution2.executor&quot;: &quot;Run&quot;,
     &quot;Python.kmeansforsteamdata.executor&quot;: &quot;Run&quot;,
     &quot;Python.kmeansreview.executor&quot;: &quot;Run&quot;,
     &quot;Python.ldatest.executor&quot;: &quot;Run&quot;,
@@ -113,8 +117,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.trainsteam2024withrf">
-    <configuration name="trainsteam2024withcatboost" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.VIFcomputing">
+    <configuration name="VIFcomputing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,7 +131,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/trainsteam2024withcatboost.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/VIFcomputing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="trainsteam2024withregression1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="drawdistribution1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,7 +153,51 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/trainsteam2024withregression1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/drawdistribution1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="drawdistribution2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/drawdistribution2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trainsteam2024withlgbm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/trainsteam2024withlgbm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,64 +228,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="trainsteam2024withridge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/trainsteam2024withridge.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trainsteam2024withxgboost" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ref3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ref3/trainsteam2024withxgboost.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.trainsteam2024withcatboost" />
-      <item itemvalue="Python.trainsteam2024withregression1" />
+      <item itemvalue="Python.VIFcomputing" />
+      <item itemvalue="Python.drawdistribution1" />
+      <item itemvalue="Python.drawdistribution2" />
+      <item itemvalue="Python.trainsteam2024withlgbm" />
       <item itemvalue="Python.trainsteam2024withrf" />
-      <item itemvalue="Python.trainsteam2024withridge" />
-      <item itemvalue="Python.trainsteam2024withxgboost" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.VIFcomputing" />
+        <item itemvalue="Python.drawdistribution2" />
+        <item itemvalue="Python.drawdistribution1" />
         <item itemvalue="Python.trainsteam2024withrf" />
-        <item itemvalue="Python.trainsteam2024withregression1" />
-        <item itemvalue="Python.trainsteam2024withcatboost" />
-        <item itemvalue="Python.trainsteam2024withridge" />
-        <item itemvalue="Python.trainsteam2024withxgboost" />
+        <item itemvalue="Python.trainsteam2024withlgbm" />
       </list>
     </recent_temporary>
   </component>
@@ -392,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732502024929</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="2025.1.1">
+      <option name="closed" value="true" />
+      <created>1735771410112</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1735771410112</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,6 +436,7 @@
     <MESSAGE value="2024.10.16" />
     <MESSAGE value="2024.10.26" />
     <MESSAGE value="2024.11.22 Ref2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024.11.22 Ref2" />
+    <MESSAGE value="2025.1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025.1.1" />
   </component>
 </project>
